@@ -1,27 +1,43 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
+import brc from "../assets/images/brc.png"
+import vegetarian from "../assets/images/vegetarian.svg"
+import logo from "../assets/images/logo.svg"
 
 const Footer = () => (
   <footer id="footer">
-    <div className="row inner">
-      <div className="container footer_container">
+    <div className="container inner">
+      <div className="row footer_container ">
         <div className="col-md-3 footer_item text-left">
-          <h5>Digital Works Agency</h5>
-          <p className="mt-2">
-            Huckletree West <br />
-            191 Wood Lane London <br />
-            W12 7FP
+          <p>
+            <Link to="contact-us">Contact Us</Link>
           </p>
-          <div className="contact_links mt-3">
-            <a href="tel:020 8144 5873">
-              <h5>020 8144 5873</h5>
-            </a>
-            <a href="mailto:hello@digitalworksagency.com" className="my-5">
-              <h5>hello@digitalworksagency.com</h5>
-            </a>
-          </div>
+          <p>
+            <Link to="terms-and-conditions">Terms and Contitions</Link>
+          </p>
+          <p>
+            <Link to="privacy-policy">Privacy Policy</Link>
+          </p>
+          <p>
+            <Link to="cooklies-policy">Cookies Policy</Link>
+          </p>
+          <p>
+            <Link to="stockists">Stockists</Link>
+          </p>
+
           <div className="mt-4 proud_partners">
-            <span className="m-2">Proud Partners of</span>
+            <div className="row">
+              <div className="col-sm-4">
+                <img src={brc} alt="" />
+              </div>
+              <div className="col-sm-4">
+                <img src={brc} alt="" />
+              </div>
+              <div className="col-sm-4">
+                <img src={vegetarian} alt="" />
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-md-6 footer_item">
@@ -43,56 +59,38 @@ const Footer = () => (
             policy <Link to="/privacy-policy"> here.</Link>
           </p>
           <ul className="copyright text-center mt-5">
-            <li>
-              <Link to="/terms">Terms &amp; Conditions</Link>
-            </li>
-            <li>
-              <Link to="/privacy">Privacy Policy</Link>
-            </li>
-            <li>&copy; Digital Works Now Ltd 2019</li>
+            <li>&copy; Virginia Health Foods Ltd 2019</li>
           </ul>
         </div>
         <div className="col-md-3 footer_item ">
           <h5>Follow us</h5>
           <ul className="container icons mt-2">
             <li>
-              <a
-                href="https://twitter.com/DW_Agency"
-                target="__blank"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
+              <a href="https://twitter.com/DW_Agency" target="__blank">
+                <FaTwitter />
               </a>
             </li>
             <li>
               <a
                 href="https://www.facebook.com/digitalworksagency/"
                 target="__blank"
-                className="icon fa-facebook"
               >
-                <span className="label">Facebook</span>
+                <FaFacebookF />
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.instagram.com/digitalworksagency/"
-                target="__blank"
-                className="icon fa-instagram"
-              >
-                <span className="label">Instagram</span>
-              </a>
-            </li>
+
             <li>
               <a
                 href="https://www.linkedin.com/company/digital-works-agency/"
                 target="__blank"
-                className="icon fa-linkedin"
               >
-                <span className="label">LinkedIn</span>
+                <FaLinkedinIn />
               </a>
             </li>
           </ul>
-          <Link to="/" className="logo"></Link>
+          <Link to="/" className="logo">
+            <img src={logo} alt="" />
+          </Link>
         </div>
       </div>
     </div>

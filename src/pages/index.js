@@ -7,6 +7,7 @@ import { Container, Row } from "react-bootstrap"
 import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
+import ContactUs from "../components/ContactUs"
 
 const IndexPage = () => (
   <Layout>
@@ -30,6 +31,9 @@ const IndexPage = () => (
       <QualityAndSustainability />
     </div>
     <WorkWith />
+    <div id="contactUs">
+      <ContactUs />
+    </div>
   </Layout>
 )
 

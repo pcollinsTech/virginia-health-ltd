@@ -4,16 +4,21 @@
 @import "libs/functions";
 @import "libs/mixins";
 @import "libs/skel";
-
+@import "../css/font-awesome.min.css";
 // Base
 
 @import "base/typography";
+
+// Layout
+
+@import "layout/footer";
 
 // Components
 
 @import "components/banner";
 @import "components/ourBrands";
 @import "components/qualityAndSustainability";
+@import "components/contactUs";
 
 // Pages
 
