@@ -1,35 +1,31 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
-import squbes from "../../assets/images/squbes.png"
+import qualityAndSustainability from "../../assets/images/qualityAndSustainability.png"
 
 const QualityAndSustainability = () => {
   return (
-    <Container className="bg-dark">
-      <Row>
-        <Col>
-          <h3>Virginia Health</h3>
+    <Container>
+      <Row className="d-flex justify-content-between">
+        <div className="col-sm-5 pt-5">
+          <h2>Quality and Sustainability</h2>
           <p>
-            Virginia Health Our products range from delicious gluten free baking
-            mixes to highly nutritious seed mixes for cereal toppings, crunch
-            toppings, salad toppings and snacks.
+            We use the expertise and know how of our technical, quality and
+            production teams to create value in your business. By developing
+            manufacturing and monitoring foods to the highest standards, we
+            ensure that your inspiration leads to consistent, reliable products
+            that you and your customers can trust. Our documented project
+            management timelines allows you clear planning visibility and
+            deadlines. This gives reassurance on project progress to all
+            stakeholders during the development and launch process.
           </p>
           <button className="btn btn-primary">
             <Link to="">Read More</Link>
           </button>
-        </Col>
-        <Col>
-          <img src={squbes} alt="" />
-          <h3>Squbes</h3>
-          <p>
-            Squbes Our products range from delicious gluten free baking mixes to
-            highly nutritious seed mixes for cereal toppings, crunch toppings,
-            salad toppings and snacks.
-          </p>
-          <button className="btn btn-primary">
-            <Link to="">Visit Website</Link>
-          </button>
-        </Col>
+        </div>
+        <div className="col-sm-7">
+          <img src={qualityAndSustainability} alt="" />
+        </div>
       </Row>
     </Container>
   )

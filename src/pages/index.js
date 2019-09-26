@@ -26,7 +26,9 @@ const IndexPage = () => (
       </Row>
     </Container>
     <OurBrands />
-    <QualityAndSustainability />
+    <div id="qualityAndSustainability">
+      <QualityAndSustainability />
+    </div>
     <WorkWith />
   </Layout>
 )

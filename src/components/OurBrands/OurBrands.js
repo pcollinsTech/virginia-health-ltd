@@ -10,7 +10,7 @@ const OurBrands = () => {
     <div>
       <Container id="ourBrands">
         <h2 className="text-center">Our Brands</h2>
-        <Row className="d-flex justify-content-between">
+        <Row className="d-flex justify-content-between pb-5">
           <div className="col-sm-4 px-3 brand_item">
             <img src={vhealth} alt="" />
             <h3>Virginia Health</h3>
