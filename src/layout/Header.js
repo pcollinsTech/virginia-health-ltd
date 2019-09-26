@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import { Navbar, Nav, Container } from "react-bootstrap"
-
+import logo from "../assets/images/logo.svg"
 class Header extends Component {
   render() {
     return (
@@ -15,7 +15,9 @@ class Header extends Component {
         >
           <Container>
             <Navbar.Brand>
-              <Link to="/">Virginia</Link>
+              <Link to="/">
+                <img src={logo} alt="Logo" />
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" id="collaspe-btn" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -28,13 +30,13 @@ class Header extends Component {
 
                 <Nav.Item>
                   <Link
-                    to="/get-started"
+                    to="/what-we-do"
                     offset={-70}
                     duration={800}
                     className="nav-link"
                     onClick={this.closeNavbar}
                   >
-                    Getting Started
+                    What We Do
                   </Link>
                 </Nav.Item>
                 {/* <NavDropdown title="Academy" id="basic-nav-dropdown">
@@ -63,13 +65,35 @@ class Header extends Component {
 
                 <Nav.Item>
                   <Link
-                    to="/exchange-finder"
+                    to="/our-brands"
                     offset={-70}
                     duration={800}
                     className="nav-link"
                     onClick={this.closeNavbar}
                   >
-                    Exchange Finder
+                    Our Brands
+                  </Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Link
+                    to="private-label"
+                    className="nav-link"
+                    onClick={this.closeNavbar}
+                  >
+                    Private Label
+                  </Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Link
+                    to="/our-promise"
+                    offset={-70}
+                    duration={800}
+                    className="nav-link"
+                    onClick={this.closeNavbar}
+                  >
+                    Our Promise
                   </Link>
                 </Nav.Item>
 
@@ -80,16 +104,6 @@ class Header extends Component {
                     onClick={this.closeNavbar}
                   >
                     Blog
-                  </Link>
-                </Nav.Item>
-
-                <Nav.Item>
-                  <Link
-                    to="about"
-                    className="nav-link"
-                    onClick={this.closeNavbar}
-                  >
-                    About Us
                   </Link>
                 </Nav.Item>
               </Nav>

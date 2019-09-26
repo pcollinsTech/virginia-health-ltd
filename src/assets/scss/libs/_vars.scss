@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Operetta";
+  src: url("../fonts/Operetta 12 Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Operetta-Black";
+  src: url("../fonts/Operetta 12 Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "Operetta-Bold";
+  src: url("../fonts/Operetta 12 Bold.otf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+// Misc.
+$misc: (
+  z-index-base: 10000,
+);
+
+// Duration.
+$duration: (
+  menu: 0.35s,
+  transition: 0.2s,
+  banner: 2.5s,
+);
+
+// Size.
+$size: (
+  border-radius: 4px,
+  element-height: 3.2em,
+  element-margin: 2em,
+  inner: 65em,
+);
+
+// Font.
+$font: (
+  family: (
+    "Operetta",
+    "Operetta-Black",
+    "Operetta-Bold",
+    Helvetica,
+    sans-serif,
+  ),
+  lato: (
+    "Lato",
+  ),
+  family-fixed: (
+    "Operetta",
+    "Operetta-Black",
+    "Operetta-Bold",
+    monospace,
+  ),
+  weight: 300,
+  weight-bold: 600,
+  letter-spacing: 0.025em,
+  letter-spacing-alt: 0.25em,
+);
+
+// Palette.
+$palette: (
+  bg: #aec237,
+  bg-alt: #0e2539,
+  fg: #ffffff,
+  fg-bold: #ffffff,
+  black: #000000,
+  white: #ffffff,
+  fg-light: rgba(244, 244, 255, 0.2),
+  border: rgba(212, 212, 255, 0.1),
+  border-bg: rgba(212, 212, 255, 0.035),
+  highlight: #9bf1ff,
+);

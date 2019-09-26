@@ -1,0 +1,16 @@
+#ourBrands {
+  h2 {
+    font-size: 50px;
+    color: _palette(bg-alt);
+  }
+
+  h3 {
+    font-size: 27px;
+    color: _palette(bg-alt);
+  }
+  .brand_item {
+    img {
+      max-width: 100%;
+    }
+  }
+}
