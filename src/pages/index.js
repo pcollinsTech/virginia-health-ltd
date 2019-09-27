@@ -30,7 +30,9 @@ const IndexPage = () => (
     <div id="qualityAndSustainability">
       <QualityAndSustainability />
     </div>
-    <WorkWith />
+    <div id="WorkWith">
+      <WorkWith />
+    </div>
     <div id="contactUs">
       <ContactUs />
     </div>
