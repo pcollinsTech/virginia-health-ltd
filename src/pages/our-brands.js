@@ -9,7 +9,7 @@ import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/ourBrandsBanner.png"
+import banner from "../assets/images/BannerOurBrands.png"
 const OurBrandsPage = () => (
   <Layout>
     <SEO title="Our Brands" />
@@ -17,9 +17,9 @@ const OurBrandsPage = () => (
       imgOne={banner}
       imgTwo={banner}
       imgThree={banner}
-      titleOne="Health Food With a Difference"
-      titleTwo="Health Food With a Difference"
-      titleThree="Health Food With a Difference"
+      titleOne="Our Brands"
+      titleTwo="Our Brands"
+      titleThree="Our Brands"
     />
     <Container className="text-center my-5">
       <Row>

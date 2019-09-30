@@ -10,30 +10,23 @@ import ContactUs from "../components/ContactUs"
 import quality from "../assets/images/quality.png"
 import manufacture from "../assets/images/manufacture.png"
 import productDevelopment from "../assets/images/productDevelopment.png"
-import banner from "../assets/images/bannerOne.png"
+import banner from "../assets/images/whatWeDoBanner.png"
 
 const WhatWeDoPage = () => (
   <Layout>
     <SEO title="Our Brands" />
-    <Banner
-      imgOne={banner}
-      imgTwo={banner}
-      imgThree={banner}
-      titleOne="Health Food With a Difference"
-      titleTwo="Health Food With a Difference"
-      titleThree="Health Food With a Difference"
-    />
+    <Banner img={banner} title="What We Do" />
     <Container className="my-5 how_we_do_it">
       <h2 className="text-center">How We Do It</h2>
-      <Row>
-        <p className="home_text">
+      <Row className="mb-5">
+        <p className="home_text text-center">
           Using our nutritional and technical knowledge, and our sourcing and
           project management experience we develop and produce healthy wholesome
           and convenient products that you can trust , designed for you and your
           customers at prices you can afford.
         </p>
       </Row>
-      <Row>
+      <Row className="mb-5">
         <div className="col-sm-6">
           <img src={productDevelopment} alt="Product Development" />
         </div>
@@ -49,7 +42,8 @@ const WhatWeDoPage = () => (
             with agreed finished product specifications.
           </p>
         </div>
-
+      </Row>
+      <Row className="mb-5">
         <div className="col-sm-6">
           <h3>Quality</h3>
           <p>
@@ -67,6 +61,8 @@ const WhatWeDoPage = () => (
         <div className="col-sm-6">
           <img src={quality} alt="Quality" />
         </div>
+      </Row>
+      <Row className="mb-5">
         <div className="col-sm-6">
           <img src={manufacture} alt="Manufacture" />
         </div>

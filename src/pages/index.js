@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
-import Banner from "../components/Banner"
+import Banner from "../components/BannerCarousel"
 import { Container, Row } from "react-bootstrap"
 import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"

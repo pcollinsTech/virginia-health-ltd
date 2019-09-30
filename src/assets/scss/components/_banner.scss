@@ -1,18 +1,18 @@
-.carousel-caption {
-  bottom: 25%;
-  left: 15%;
-  h2 {
-    font-size: 60px;
-  }
-}
-
-.carousel-indicators {
-  display: none;
-}
-
-.carousel-item {
+.banner_image {
+  position: relative;
+  text-align: center;
+  color: white;
   img {
+    width: 100%;
+    max-width: 100%;
     opacity: 0.8;
     filter: brightness(60%);
+  }
+  h2 {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

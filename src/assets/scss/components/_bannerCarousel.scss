@@ -1,0 +1,18 @@
+.carousel-caption {
+  bottom: 25%;
+  left: 15%;
+  h2 {
+    font-size: 60px;
+  }
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-item {
+  img {
+    opacity: 0.8;
+    filter: brightness(60%);
+  }
+}
