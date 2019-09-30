@@ -58,7 +58,7 @@ const ContactUs = () => {
           </Link>
         </div>
         <div className="col-sm-5">
-          <form>
+          <form className="d-flex justify-content-between flex-column">
             <div className="form-group">
               <input type="text" className="form-control" placeholder="Name" />
             </div>
