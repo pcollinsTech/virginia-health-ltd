@@ -1,6 +1,6 @@
 import React from "react"
 
-const BannerCarousel = ({ img, title }) => {
+const Banner = ({ img, title }) => {
   return (
     <div className="banner_image">
       <img className="d-block w-100" src={img} alt="First slide" />
@@ -9,4 +9,4 @@ const BannerCarousel = ({ img, title }) => {
   )
 }
 
-export default BannerCarousel
+export default Banner
