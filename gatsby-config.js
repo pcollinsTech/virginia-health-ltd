@@ -16,6 +16,35 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "api.digitalworksagency.com",
+        protocol: "https",
+        // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
+        // This feature is untested for sites hosted on wordpress.com.
+        // Defaults to true.
+        useACF: true,
+        // Blacklisted routes using glob patterns
+        excludedRoutes: [
+          "**/settings",
+          "**/options",
+          "**/stats",
+          "**/alert",
+          "**/configurator",
+          "**/reindex_posts",
+          "**/ryte",
+          "**/statistics",
+          "***/users",
+          "***/options",
+          "**/key",
+        ],
+        // use a custom normalizer which is applied after the built-in ones.
+        normalizer: function({ entities }) {
+          return entities
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
