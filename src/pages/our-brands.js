@@ -13,7 +13,14 @@ import banner from "../assets/images/ourBrandsBanner.png"
 const OurBrandsPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Banner imageOne={banner} imageTwo={banner} imageThree={banner} />
+    <Banner
+      imageOne={banner}
+      imageTwo={banner}
+      imageThree={banner}
+      titleOne="Health Food With a Difference"
+      titleTwo="Health Food With a Difference"
+      titleThree="Health Food With a Difference"
+    />
     <Container className="text-center my-5">
       <Row>
         <p className="home_text">

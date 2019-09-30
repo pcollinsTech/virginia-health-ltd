@@ -13,7 +13,14 @@ import banner from "../assets/images/bannerOne.png"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Banner imageOne={banner} imageTwo={banner} imageThree={banner} />
+    <Banner
+      imageOne={banner}
+      imageTwo={banner}
+      imageThree={banner}
+      titleOne="Health Food With a Difference"
+      titleTwo="Health Food With a Difference"
+      titleThree="Health Food With a Difference"
+    />
     <Container className="text-center my-5">
       <Row>
         <p className="home_text">

@@ -40,7 +40,7 @@ class Header extends Component {
               </Nav.Item>
               <NavDropdown title=" Our Brands" id="basic-nav-dropdown">
                 <NavDropdown.Item>
-                  <Link to="/what-is-bitcoin">What is Bitcoin?</Link>
+                  <Link to="/our-brands">Our Brands</Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
