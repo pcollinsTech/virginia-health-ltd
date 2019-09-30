@@ -1,0 +1,21 @@
+.navbar-brand {
+  img {
+    width: 150px;
+  }
+}
+.nav-link {
+  color: _palette(bg-alt);
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: _palette(bg) !important;
+  font-weight: bold;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbar button {
+  width: 200px;
+  height: 38px;
+}

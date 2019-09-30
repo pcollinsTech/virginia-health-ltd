@@ -12,6 +12,7 @@
 // Layout
 
 @import "layout/footer";
+@import "layout/header";
 
 // Components
 
@@ -31,3 +32,7 @@
 @import "pages/ourPromise";
 
 @import "base/bootstrapOverwrites";
+
+.grey-bg {
+  background-color: #f4f4f4;
+}

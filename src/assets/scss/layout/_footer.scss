@@ -13,8 +13,9 @@
   .logo {
     border: 0;
     display: inline-block;
-    width: 60%;
-
+    img {
+      width: 150px;
+    }
     &:hover {
       strong {
         background-color: _palette(highlight);
@@ -25,6 +26,12 @@
       strong {
         background-color: desaturate(darken(_palette(highlight), 15), 5);
       }
+    }
+  }
+  .partners {
+    img {
+      width: 30px;
+      margin-right: 20px;
     }
   }
   .icons {
@@ -54,16 +61,24 @@
   }
   .form-group {
     margin-bottom: 0 !important;
+    .form-control {
+      border-radius: 0;
+      height: 50px;
+    }
   }
   button {
     height: 3.2em;
-    margin-left: 0.6em;
+    width: 150px;
   }
+
   .footer_item:nth-of-type(2) {
     padding: 0 50px;
   }
   .footer_item:nth-of-type(3) {
     text-align: center;
+    a {
+      text-align: left !important;
+    }
   }
   .copyright {
     font-size: 0.8em;
@@ -100,8 +115,7 @@
 
   @include breakpoint(small) {
     .logo {
-      padding: 0 1em;
-      width: 25%;
+      width: 150px;
       img {
         max-height: 80px;
       }

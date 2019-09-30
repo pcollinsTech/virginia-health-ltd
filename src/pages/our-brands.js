@@ -9,8 +9,8 @@ import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/bannerOne.png"
-const IndexPage = () => (
+import banner from "../assets/images/ourBrandsBanner.png"
+const OurBrandsPage = () => (
   <Layout>
     <SEO title="Home" />
     <Banner imageOne={banner} imageTwo={banner} imageThree={banner} />
@@ -40,4 +40,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default OurBrandsPage

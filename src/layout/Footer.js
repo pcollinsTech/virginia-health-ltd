@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 import brc from "../assets/images/brc.png"
 import vegetarian from "../assets/images/vegetarian.svg"
-import logo from "../assets/images/logo.svg"
+import logo from "../assets/images/logoWhite.svg"
 
 const Footer = () => (
   <footer id="footer">
@@ -26,18 +26,10 @@ const Footer = () => (
             <Link to="stockists">Stockists</Link>
           </p>
 
-          <div className="mt-4 proud_partners">
-            <div className="row">
-              <div className="col-sm-4">
-                <img src={brc} alt="" />
-              </div>
-              <div className="col-sm-4">
-                <img src={brc} alt="" />
-              </div>
-              <div className="col-sm-4">
-                <img src={vegetarian} alt="" />
-              </div>
-            </div>
+          <div className="mt-4 partners">
+            <img src={brc} alt="" />
+            <img src={brc} alt="" />
+            <img src={vegetarian} alt="" />
           </div>
         </div>
         <div className="col-md-6 footer_item">
@@ -50,7 +42,9 @@ const Footer = () => (
                 placeholder="Email"
               />
             </div>
-            <button type="submit">Subscribe</button>
+            <button type="submit" className="btn btn-primary">
+              Subscribe
+            </button>
           </form>
           <p>
             In accordance with our GDPR obligations we seek your consent to
@@ -88,7 +82,7 @@ const Footer = () => (
               </a>
             </li>
           </ul>
-          <Link to="/" className="logo">
+          <Link to="/" className="logo text-left">
             <img src={logo} alt="" />
           </Link>
         </div>
