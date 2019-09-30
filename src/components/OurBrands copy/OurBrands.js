@@ -27,7 +27,7 @@ const data = [
       "Crunch & Cereals Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
     buttonTitle: "Read More",
     buttonLink: "",
-    title: "Crunch",
+    title: "Virginia Health",
   },
 ]
 const OurBrands = () => {

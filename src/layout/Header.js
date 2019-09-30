@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
+import SideNav from "./SideNav"
 class Header extends Component {
   render() {
     return (

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 import brc from "../assets/images/brc.png"
 import vegetarian from "../assets/images/vegetarian.svg"
+import gluten from "../assets/images/gluten.png"
 import logo from "../assets/images/logoWhite.svg"
 
 const Footer = () => (
@@ -28,7 +29,7 @@ const Footer = () => (
 
           <div className="mt-4 partners">
             <img src={brc} alt="" />
-            <img src={brc} alt="" />
+            <img src={gluten} alt="" />
             <img src={vegetarian} alt="" />
           </div>
         </div>

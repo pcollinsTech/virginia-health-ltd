@@ -12,11 +12,11 @@ import ContactUs from "../components/ContactUs"
 import banner from "../assets/images/ourBrandsBanner.png"
 const OurBrandsPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Our Brands" />
     <Banner
-      imageOne={banner}
-      imageTwo={banner}
-      imageThree={banner}
+      imgOne={banner}
+      imgTwo={banner}
+      imgThree={banner}
       titleOne="Health Food With a Difference"
       titleTwo="Health Food With a Difference"
       titleThree="Health Food With a Difference"
