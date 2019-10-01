@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap"
 import vhealth from "../../assets/images/vhealth.png"
 import crunch from "../../assets/images/crunch.png"
 import squbes from "../../assets/images/squbes.png"
-import RowThreeCards from "../RowThreeCards/RowThreeCards"
+import RowThreeCards from "../RowThreeCards"
 const data = [
   {
     img: vhealth,

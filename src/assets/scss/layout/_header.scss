@@ -3,15 +3,18 @@
     width: 150px;
   }
 }
+
 .nav-link {
-  color: _palette(bg-alt);
+  color: _palette(black);
   font-weight: bold;
   font-size: 20px;
 }
+
 .nav-link:hover {
   color: _palette(bg) !important;
   font-weight: bold;
 }
+
 .dropdown-toggle::after {
   display: none;
 }
@@ -19,4 +22,8 @@
 .navbar button {
   width: 200px;
   height: 38px;
+}
+
+.sticky-top {
+  padding: 12px 55px;
 }
