@@ -8,40 +8,45 @@ import ContactUs from "../components/ContactUs"
 
 import banner from "../assets/images/ourPromiseBanner.png"
 import blankLabel from "../assets/images/blackLabel.png"
+import originGreen from "../assets/images/originGreenLogo.png"
 
 class OurPromisePage extends React.Component {
   render() {
-    console.log("POSTS", this.props)
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner img={banner} imgtwo="" title="Our Promise" subtitle="" />
+        <Banner
+          img={banner}
+          imgtwo={originGreen}
+          title="Our Promise to you"
+          subtitle="Quality and the Environment"
+        />
         <Container className="my-5 private_label">
           <Row>
-            <p>
+            <p className="home_text">
               Virginia Health Food Ltd creates healthy natural products, grows
               more ingredients locally and supports a nature education community
               through Origin Green, Ireland’s food and drink sustainability
               programme.
             </p>
-            <p>
+            <p className="home_text">
               We endeavour to partner with only those who have a verified
               commitment to sustainability.
             </p>
-            <p>
+            <p className="home_text">
               This programme brings together our food industry – from farmers to
               food producers, retailers to foodservice operators – with the
               common goal of sustainable food production.
             </p>
             <h2 className="py-3">Quality Products</h2>
-            <p>
+            <p className="home_text">
               The overall ambition of the Origin Green programme is that farms
               and food manufacturing businesses throughout Ireland sign up to
               the sustainability agenda, making measurable commitments to
               producing in a sustainable manner, with progress independently
               assessed and verified.
             </p>
-            <p>
+            <p className="home_text">
               We, Virginia Health Food Ltd, are committed to working with Origin
               Green to improve sustainable thinking through collaboration in
               this sector.
@@ -55,14 +60,14 @@ class OurPromisePage extends React.Component {
         <Container>
           <Row>
             <h2 className="pt-3">Raw Materials</h2>
-            <p>
+            <p className="home_text">
               The overall ambition of the Origin Green programme is that farms
               and food manufacturing businesses throughout Ireland sign up to
               the sustainability agenda, making measurable commitments to
               producing in a sustainable manner, with progress independently
               assessed and verified.
             </p>
-            <p>
+            <p className="home_text">
               We, Virginia Health Food Ltd, are committed to working with Origin
               Green to improve sustainable thinking through collaboration in
               this sector.
@@ -72,14 +77,14 @@ class OurPromisePage extends React.Component {
         <Container>
           <Row>
             <h2 className="pt-3">Waste and Recycling</h2>
-            <p>
+            <p className="home_text">
               The overall ambition of the Origin Green programme is that farms
               and food manufacturing businesses throughout Ireland sign up to
               the sustainability agenda, making measurable commitments to
               producing in a sustainable manner, with progress independently
               assessed and verified.
             </p>
-            <p>
+            <p className="home_text">
               We, Virginia Health Food Ltd, are committed to working with Origin
               Green to improve sustainable thinking through collaboration in
               this sector.
@@ -89,14 +94,14 @@ class OurPromisePage extends React.Component {
         <Container>
           <Row>
             <h2 className="pt-3">Communication</h2>
-            <p>
+            <p className="home_text">
               The overall ambition of the Origin Green programme is that farms
               and food manufacturing businesses throughout Ireland sign up to
               the sustainability agenda, making measurable commitments to
               producing in a sustainable manner, with progress independently
               assessed and verified.
             </p>
-            <p>
+            <p className="home_text">
               We, Virginia Health Food Ltd, are committed to working with Origin
               Green to improve sustainable thinking through collaboration in
               this sector.
