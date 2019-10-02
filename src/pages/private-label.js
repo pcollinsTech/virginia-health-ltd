@@ -73,7 +73,9 @@ class PrivateIndex extends React.Component {
             </div>
           </Row>
         </Container>
-        <RowThreeCards data={data} />
+        <Container>
+          <RowThreeCards data={data} />
+        </Container>
         <div id="qualityAndSustainability">
           <QualityAndSustainability />
         </div>

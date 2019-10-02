@@ -3,7 +3,7 @@ import { Row } from "react-bootstrap"
 import Card from "./Card"
 const RowThreeCards = ({ data }) => {
   return (
-    <Row className="d-flex justify-content-between pb-5">
+    <Row className="d-flex justify-content-between pb-5 row_three_cards">
       {data.map(item => {
         return (
           <Card
