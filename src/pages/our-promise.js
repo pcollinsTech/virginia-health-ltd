@@ -14,8 +14,8 @@ class OurPromisePage extends React.Component {
     console.log("POSTS", this.props)
     return (
       <Layout>
-        <SEO title="Home" />
-        <Banner img={banner} title="Private Label" />
+        <SEO title="Our Promise" />
+        <Banner img={banner} imgtwo="" title="Our Promise" subtitle="" />
         <Container className="text-center my-5 private_label">
           <Row>
             <div className="col-sm-6">
