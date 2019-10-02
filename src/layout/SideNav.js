@@ -1,16 +1,16 @@
 import React, { Component } from "react"
 import { Nav, Modal } from "react-bootstrap"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import {
-  FaMapSigns,
   FaPhone,
   FaEnvelope,
   FaFacebookF,
-  FaInstagram,
   FaTwitter,
   FaLinkedinIn,
-  FaPinterest,
 } from "react-icons/fa"
+
+import logo from "../assets/images/logo.svg"
 
 export class SideNav extends Component {
   constructor(props, context) {
@@ -47,29 +47,33 @@ export class SideNav extends Component {
           <Modal.Header closeButton />
           <Modal.Body>
             <div className="logo">
-              <a href="/">
-                {this.props.logotext}
-                <span>{this.props.logotextspan}</span>{" "}
-              </a>
+              <Link to="/">
+                <img src={logo} alt="Logo" />
+              </Link>
             </div>
             <p>{this.props.content}</p>
             <ul className="modal-contact-info">
               <li>
-                <FaMapSigns />
-                <b>18 Ormeau Avenue</b>
-                Belfast, Northern Ireland BT2 8HS
+                <FaPhone />
+                <b>
+                  <a
+                    href={`tel:+(44) 121 288 3363`}
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    UK +(44) 121 288 3363
+                  </a>
+                </b>
               </li>
               <li>
                 <FaPhone />
                 <b>
                   <a
-                    href={`tel:${this.props.phonebolt}`}
+                    href={`tel: +(353) 21 477 0033`}
                     style={{ color: "black", textDecoration: "none" }}
                   >
-                    {this.props.phonebolt}
+                    Ireland +(353) 21 477 0033
                   </a>
                 </b>
-                {this.props.phonenormal}
               </li>
               <li>
                 <FaEnvelope />
@@ -97,18 +101,8 @@ export class SideNav extends Component {
                 </a>
               </li>
               <li>
-                <a href={this.props.instagramlink}>
-                  <FaInstagram />
-                </a>
-              </li>
-              <li>
                 <a href={this.props.linkedinlink}>
                   <FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a href={this.props.pinterestlink}>
-                  <FaPinterest />
                 </a>
               </li>
             </ul>
@@ -135,19 +129,10 @@ SideNav.PropsTypes = {
   pinterestlink: PropTypes.string,
 }
 SideNav.defaultProps = {
-  logotext: "G-",
-  logotextspan: "Science",
-  content: "Get in touch",
-  locationbolt: "",
-  locationnormal: "Northern Ireland",
-  phonebolt: "07881092136",
-  phonenormal: "Give us a call",
-  mailbolot: "info@gscience.gg",
+  mailbolot: "info@virginiahealth.net",
   mailnormal: "Online support & enquiries",
   facebooklink: "#",
   twitterlink: "#",
-  instagramlink: "#",
   linkedinlink: "#",
-  pinterestlink: "#",
 }
 export default SideNav
