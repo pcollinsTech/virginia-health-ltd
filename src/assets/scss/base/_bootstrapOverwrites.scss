@@ -14,3 +14,7 @@
   background-color: _palette(bg-alt);
   border-color: _palette(bg-alt);
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

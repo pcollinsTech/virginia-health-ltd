@@ -1,0 +1,15 @@
+.white_circle {
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  margin: 10px;
+}
+
+.selling_point {
+  background-color: _palette(bg-alt);
+  padding: 20px;
+}
+
+.selling_point:hover {
+  background-color: _palette(bg);
+}

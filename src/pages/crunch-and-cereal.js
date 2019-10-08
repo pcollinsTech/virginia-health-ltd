@@ -7,11 +7,65 @@ import { Container, Row } from "react-bootstrap"
 import MeetTheExperts from "../components/MeetTheExperts"
 import ContactUs from "../components/ContactUs"
 import SelectIngredients from "../components/SelectIngredients"
+import UniqueSellingPoints from "../components/UniqueSellingPoints"
+import SelectPackaging from "../components/SelectPackaging"
 
+import nutsSeeds from "../assets/images/ingredients/nutsSeeds.png"
+import fruitsAndBerries from "../assets/images/ingredients/fruitsAndBerries.png"
+import functional from "../assets/images/ingredients/functional.png"
+import herbsAndSpices from "../assets/images/ingredients/herbsAndSpices.png"
+import proteins from "../assets/images/ingredients/proteins.png"
 import quality from "../assets/images/quality.png"
 import manufacture from "../assets/images/manufacture.png"
-import productDevelopment from "../assets/images/productDevelopment.png"
 import banner from "../assets/images/mixSeedsBanner.png"
+
+const ingredientsData = [
+  {
+    img: nutsSeeds,
+    title: "Nuts & Seeds",
+  },
+  {
+    img: fruitsAndBerries,
+    title: "Fruits & Berries, Vegetables",
+  },
+
+  {
+    img: herbsAndSpices,
+    title: "Herbs, Spices & Flavours",
+  },
+  {
+    img: proteins,
+    title: "Proteins",
+  },
+  {
+    img: functional,
+    title: "Functional Ingredients",
+  },
+]
+
+const sellingPointsData = [
+  {
+    img: nutsSeeds,
+    title: "Nuts & Seeds",
+  },
+  {
+    img: fruitsAndBerries,
+    title: "Fruits & Berries, Vegetables",
+  },
+
+  {
+    img: herbsAndSpices,
+    title: "Herbs, Spices & Flavours",
+  },
+  {
+    img: proteins,
+    title: "Proteins",
+  },
+  {
+    img: functional,
+    title: "Functional Ingredients",
+  },
+]
 
 const MixSeedsForm = () => {
   return (
@@ -19,24 +73,10 @@ const MixSeedsForm = () => {
       <SEO title="Our Brands" />
       <Banner img={banner} title="Milled Seed and Nut Mixes" />
       <Container className="my-5 how_we_do_it">
-        <SelectIngredients data={data} />
-        <Row className="mb-5">
-          <div className="col-sm-6">
-            <img src={productDevelopment} alt="Product Development" />
-          </div>
-          <div className="col-sm-6">
-            <h3>Product Development</h3>
-            <p>
-              New Product Development : Our highly skilled product development
-              team work to specific briefs to create products with specific
-              nutritional profiles that meet legal and customer requirements for
-              healthy products, and the sensory profiles required by the markets
-              we serve. Working along with our quality and production teams the
-              NPD team then scale up and monitor the process to ensure
-              consistency with agreed finished product specifications.
-            </p>
-          </div>
-        </Row>
+        <SelectIngredients data={ingredientsData} />
+        <UniqueSellingPoints />
+        <SelectPackaging data={sellingPointsData} />
+
         <Row className="mb-5">
           <div className="col-sm-6">
             <h3>Quality</h3>

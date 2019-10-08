@@ -39,21 +39,38 @@ class Header extends Component {
                   What We Do
                 </Link>
               </Nav.Item>
-              <NavDropdown title=" Our Brands" id="basic-nav-dropdown">
+
+              <NavDropdown title="Our Brands" id="basic-nav-dropdown">
                 <NavDropdown.Item>
                   <Link to="/our-brands">Our Brands</Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Item>
-                <Link
-                  to="private-label"
-                  className="nav-link"
-                  onClick={this.closeNavbar}
-                >
-                  Private Label
-                </Link>
-              </Nav.Item>
+              <NavDropdown title="Private Label" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link to="private-label" onClick={this.closeNavbar}>
+                    Private Label
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="crunch-and-cereal" onClick={this.closeNavbar}>
+                    Crunch &amp; Cereal
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="snacks" onClick={this.closeNavbar}>
+                    Snacks
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link
+                    to="milled-seed-and-nut-mixes"
+                    onClick={this.closeNavbar}
+                  >
+                    Milled Seed & Nut Mixes
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
 
               <Nav.Item>
                 <Link

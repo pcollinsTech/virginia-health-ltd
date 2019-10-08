@@ -7,7 +7,6 @@ import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
 import banner from "../assets/images/ourPromiseBanner.png"
-import blankLabel from "../assets/images/blackLabel.png"
 import originGreen from "../assets/images/originGreenLogo.png"
 
 class OurPromisePage extends React.Component {

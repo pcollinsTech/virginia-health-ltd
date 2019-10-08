@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Row } from "react-bootstrap"
-import { Link } from "gatsby"
 import homeCompostablePackaging from "../../assets/images/homeCompostablePackaging.png"
 
 const HomeCompostablePackaging = () => {
