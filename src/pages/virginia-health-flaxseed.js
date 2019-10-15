@@ -46,21 +46,14 @@ const data = [
 const VirginiaHealthPage = () => (
   <Layout>
     <SEO title="Our Brands" />
-    <Banner
-      imgOne={banner}
-      imgTwo={banner}
-      imgThree={banner}
-      titleOne="Health Food With a Difference"
-      titleTwo="Health Food With a Difference"
-      titleThree="Health Food With a Difference"
-    />
+    <Banner imgOne={banner} titleOne="Health Food With a Difference" />
     <Container className="text-center my-5">
       <Row>
         <div className="col-sm-4">
           <h2 className="green">Virginia Health Flaxseed</h2>
         </div>
         <div className="col-sm-8">
-          <hr className="green" />
+          <hr style={{ borderBottom: " solid 1px #aec237" }} />
           <div className=" d-flex text-right green justify-content-around">
             <h5>Follow Virginia Health Flaxseed</h5>
             <FaInstagram />
