@@ -11,8 +11,8 @@ import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
 import banner from "../assets/images/BannerOurBrands.png"
-const OurBrandsPage = () => {
-  console.log("IMAGES", banner)
+const OurBrandsPage = props => {
+  console.log("IMAGES", props)
   return (
     <Layout>
       <SEO title="Our Brands" />
@@ -45,7 +45,7 @@ const OurBrandsPage = () => {
         <WorkWith />
       </div>
       <div id="InTheNews">
-        <InTheNews posts={this.props.data.allWordpressPost.edges} />
+        <InTheNews posts={props.data.allWordpressPost.edges} />
       </div>
       <div id="contactUs">
         <ContactUs />

@@ -16,3 +16,27 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@include breakpoint(small) {
+  .banner_image {
+    h2 {
+      font-size: 37px;
+    }
+  }
+}
+
+@include breakpoint(xsmall) {
+  .banner_image {
+    h2 {
+      font-size: 27px;
+    }
+  }
+}
+
+@include breakpoint(xxsmall) {
+  .banner_image {
+    h2 {
+      font-size: 22px;
+    }
+  }
+}

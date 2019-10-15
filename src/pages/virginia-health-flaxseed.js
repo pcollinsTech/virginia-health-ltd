@@ -1,15 +1,48 @@
 import React from "react"
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
-import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"
-import QualityAndSustainability from "../components/QualityAndSustainability"
+import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/ourBrandsBanner.png"
+import banner from "../assets/images/virginiaHealthFlaxseedBanner.png"
+import RowThreeCards from "../components/RowThreeCards"
+
+import nutty from "../assets/images/nutty.png"
+import raspberryHemp from "../assets/images/raspberryHemp.png"
+import turmericOrange from "../assets/images/turmericOrange.png"
+
+const data = [
+  {
+    img: nutty,
+    para:
+      "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+    buttonTitle: "Buy Now",
+    buttonLink: "",
+    title: "Original Nutty Flavour",
+  },
+  {
+    img: raspberryHemp,
+    para:
+      "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+    buttonTitle: "Buy Now",
+    buttonLink: "",
+    title: "Raspberry & Hemp - Coming Soon",
+  },
+  {
+    img: turmericOrange,
+    para:
+      "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+    buttonTitle: "Buy Now",
+    buttonLink: "",
+    title: "Turmeric & Orange - Coming Soon",
+  },
+]
+
 const VirginiaHealthPage = () => (
   <Layout>
     <SEO title="Our Brands" />
@@ -23,20 +56,90 @@ const VirginiaHealthPage = () => (
     />
     <Container className="text-center my-5">
       <Row>
-        <p className="home_text">
-          Our Products include highly nutritious, milled and crunchy seed
-          toppings, delicious wholesome innovative snacks, low sugar cereals and
-          gluten free baking mixes. We weave the valuable properties of seeds
-          and cereals such as flaxseed, sunflower seed, pumpkinseed and chia ,
-          oats, quinoa and amaranth into delicious products using technical
-          excellence and a dash of ingenuity to produce products that delight
-          our customers.
+        <div className="col-sm-4">
+          <h2 className="green">Virginia Health Flaxseed</h2>
+        </div>
+        <div className="col-sm-8">
+          <hr className="green" />
+          <div className=" d-flex text-right green justify-content-around">
+            <h5>Follow Virginia Health Flaxseed</h5>
+            <FaInstagram />
+            <FaTwitter />
+            <FaFacebookF />
+          </div>
+        </div>
+      </Row>
+    </Container>
+    <Container>
+      <Row>
+        <p>
+          Virginia Harvest is a range of milled flaxseed products that are high
+          in fibre, High in Omega 3 (ALA) and gluten free.
+        </p>
+        <p>
+          The nutrients in whole flaxseed are not easy to absorb due to the
+          seed’s tough coat so we mill the seeds gently to make those wonderful
+          nutrients more accessible protecting the omega 3 from damage and
+          helping you to maximise their nutritional value in your daily diet.
+          Use 2 tablespoons each day in cereals, juices, yogurts, smoothies or
+          salads.
+        </p>
+        <p>
+          Our flaxseed is grown on a single farm from premium certified seeds of
+          the “Golden Omega” variety so its origin is guaranteed.
+        </p>
+        <p>
+          It is high in Omega 3 (Alpha Linolenic Acid) and thereby is
+          scientifically proven to help maintain normal cholesterol levels. The
+          beneficial effect is obtained with a daily intake of 2g ALA. It is
+          important to maintain a varied and balanced diet and healthy
+          lifestyle.
         </p>
       </Row>
     </Container>
-    <OurBrands />
+    <RowThreeCards data={data} />
+    <Container>
+      <h2 className="text-center">
+        <span className="green">Flaxseed: </span>The Benefits
+      </h2>
+      <Row>
+        <p>
+          Flaxseed for weight loss Did you know that many nutritionists view
+          flaxseed as an essential ingredient in any healthy weight loss diet ?
+          Unlike many other high fibre foods it is extremely low in the simple
+          carbs you need to avoid when trying to loose weight. It’s high levels
+          of fibre keep you fuller for longer avoiding those sugar lows that
+          give you hunger pangs. Flaxseed is a gentle laxative, balancing your
+          digestion and helping the body to eliminate the toxins that accumulate
+          from poor dietary habits . Flaxseed contains high levels of Omega 3
+          essential fatty acids which make your cell membranes more pliable so
+          they are better able to remove any fatty deposits from inside your
+          cells . Flaxseed also contains significant levels of protein , zinc,
+          magnesium and calcium all essential for a healthy metabolism.
+        </p>
+
+        <div className="col-sm-4 offset-sm-2">
+          <ul>
+            <li>Loaded With Nutrients</li>
+            <li>High in Omega-3 Fats</li>
+            <li>Rich Source of Lignans, Reducing Cancer Risk</li>
+            <li>Rich in Dierary Fibre</li>
+            <li>May Improve Cholesterol</li>
+          </ul>
+        </div>
+        <div className="col-sm-4">
+          <ul>
+            <li>May Lower Blood Pressure</li>
+            <li>They Contain High-Quality Protein</li>
+            <li>May Help Control Blood Sugar</li>
+            <li>Keep Hunger at Bay Aiding Weight Control</li>
+            <li>Versatile Ingredient</li>
+          </ul>
+        </div>
+      </Row>
+    </Container>
     <div id="qualityAndSustainability">
-      <QualityAndSustainability />
+      <HomeCompostablePackaging />
     </div>
     <div id="WorkWith">
       <WorkWith />

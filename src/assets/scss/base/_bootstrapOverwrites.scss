@@ -7,6 +7,11 @@
   color: white;
   background-color: _palette(bg);
   border-color: _palette(bg);
+  &:hover {
+    background-color: _palette(bg-alt);
+    border-color: _palette(bg-alt);
+    color: _palette(bg);
+  }
 }
 
 .btn-info {

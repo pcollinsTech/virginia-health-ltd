@@ -40,13 +40,22 @@ class Header extends Component {
                 </Link>
               </Nav.Item>
 
-              <NavDropdown title="Our Brands" id="basic-nav-dropdown">
+              <NavDropdown title="Our Brands">
                 <NavDropdown.Item>
                   <Link to="/our-brands">Our Brands</Link>
                 </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/virginia-health-flaxseed">Virginia Health</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/virginia-health-flaxseed">Squbes</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/virginia-health-flaxseed">Helen's</Link>
+                </NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Private Label" id="basic-nav-dropdown">
+              <NavDropdown title="Private Label">
                 <NavDropdown.Item>
                   <Link to="private-label" onClick={this.closeNavbar}>
                     Private Label

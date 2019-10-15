@@ -120,21 +120,21 @@
         max-height: 80px;
       }
     }
-    // .footer_item:nth-of-type(1) {
-    //   padding: 40px 15px;
-    //   order: 2;
-    // }
-    // .footer_item:nth-of-type(2) {
-    //   padding: 0 15px;
-    //   order: 3;
-    // }
-    // .footer_item:nth-of-type(3) {
-    //   text-align: left;
-    //   order: 1;
-    //   h5 {
-    //     padding-left: 20px;
-    //   }
-    // }
+    .footer_item:nth-of-type(1) {
+      padding: 40px 15px;
+      order: 2;
+    }
+    .footer_item:nth-of-type(2) {
+      padding: 0 15px;
+      order: 3;
+    }
+    .footer_item:nth-of-type(3) {
+      text-align: left;
+      order: 1;
+      h5 {
+        padding-left: 20px;
+      }
+    }
   }
 
   @include breakpoint(xsmall) {
