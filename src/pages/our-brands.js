@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import BannerCarousel from "../components/BannerCarousel"
@@ -8,6 +8,7 @@ import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
+import InTheNews from "../components/InTheNews"
 
 import banner from "../assets/images/BannerOurBrands.png"
 const OurBrandsPage = () => {
@@ -43,6 +44,9 @@ const OurBrandsPage = () => {
       <div id="WorkWith">
         <WorkWith />
       </div>
+      <div id="InTheNews">
+        <InTheNews posts={this.props.data.allWordpressPost.edges} />
+      </div>
       <div id="contactUs">
         <ContactUs />
       </div>
@@ -51,3 +55,22 @@ const OurBrandsPage = () => {
 }
 
 export default OurBrandsPage
+
+export const pageQuery = graphql`
+  query {
+    allWordpressPost(limit: 3) {
+      edges {
+        node {
+          date(formatString: "DD / MMMM / YYYY")
+          slug
+          title
+          wordpress_id
+          excerpt
+          featured_media {
+            source_url
+          }
+        }
+      }
+    }
+  }
+`

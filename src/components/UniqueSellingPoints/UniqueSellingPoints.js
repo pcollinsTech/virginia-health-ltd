@@ -12,7 +12,7 @@ import omega3 from "../../assets/images/selling-points/omega3.svg"
 
 const UniqueSellingPoints = ({ fish }) => {
   const fishBox =
-    fish == true ? (
+    fish === true ? (
       <div className="col-sm-3">
         <div className="selling_point">
           <div className="white_circle">

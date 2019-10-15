@@ -11,19 +11,16 @@ const BlogCard = ({ post }) => {
   } = post.node
   return (
     <div className="col-sm-4 blog_summary_item d-flex justify-content-between flex-column">
-      <img src={source_url} alt="" />
-      <h4
-        dangerouslySetInnerHTML={{ __html: title }}
-        className="my-2"
-        style={{ color: "black" }}
-      />
-      <span>{date}</span>
-      <p dangerouslySetInnerHTML={{ __html: excerpt }} />
-      <div className="text-center my-5">
-        <button className="btn btn-secondary">
-          <Link to={slug}>Read More</Link>
-        </button>
-      </div>
+      <Link to={slug}>
+        <img src={source_url} alt="" />
+        <h4
+          dangerouslySetInnerHTML={{ __html: title }}
+          className="my-2"
+          style={{ color: "black" }}
+        />
+        <span>{date}</span>
+        <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+      </Link>
     </div>
   )
 }
