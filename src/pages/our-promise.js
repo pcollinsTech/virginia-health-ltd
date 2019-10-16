@@ -7,7 +7,7 @@ import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
 import banner from "../assets/images/ourPromiseBanner.png"
-import originGreen from "../assets/images/originGreenLogo.png"
+// import originGreen from "../assets/images/originGreenLogo.png"
 
 class OurPromisePage extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class OurPromisePage extends React.Component {
         <SEO title="Home" />
         <Banner
           img={banner}
-          imgtwo={originGreen}
+          // imgtwo={originGreen}
           title="Our Promise to you"
           subtitle="Quality and the Environment"
         />
