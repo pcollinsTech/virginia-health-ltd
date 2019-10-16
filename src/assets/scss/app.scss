@@ -70,3 +70,14 @@ a:hover span,
 a:hover {
   color: _palette(bg);
 }
+.mobile_view {
+  display: none;
+}
+@include breakpoint(small) {
+  .remove_mobile {
+    display: none;
+  }
+  .mobile_view {
+    display: inline-block;
+  }
+}

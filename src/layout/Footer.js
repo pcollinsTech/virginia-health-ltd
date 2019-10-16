@@ -34,8 +34,8 @@ const Footer = () => (
           </div>
         </div>
         <div className="col-md-6 footer_item">
-          <h5>Subscribe to our newsletter</h5>
-          <form className="form-inline mt-2">
+          <h5>Subscribe to our newsletter to hear about news and offers</h5>
+          <form className="form-inline mt-2 d-flex justify-content-between">
             <div className="form-group">
               <input
                 type="email"
@@ -53,11 +53,11 @@ const Footer = () => (
             your consent at any time in the future. You can view our privacy
             policy <Link to="/privacy-policy"> here.</Link>
           </p>
-          <ul className="copyright text-center mt-5">
+          <ul className="copyright text-center mt-5 remove_mobile">
             <li>&copy; Virginia Health Foods Ltd 2019</li>
           </ul>
         </div>
-        <div className="col-md-3 footer_item ">
+        <div className="col-md-3 text-center footer_item ">
           <h5>Follow us</h5>
           <ul className="container icons mt-2">
             <li>
@@ -83,9 +83,14 @@ const Footer = () => (
               </a>
             </li>
           </ul>
-          <Link to="/" className="logo text-left">
-            <img src={logo} alt="" />
-          </Link>
+          <div>
+            <Link to="/" className="logo text-left">
+              <img src={logo} alt="" />
+            </Link>
+          </div>
+          <div className="copyright text-center mt-5 mobile_view">
+            <li>&copy; Virginia Health Foods Ltd 2019</li>
+          </div>
         </div>
       </div>
     </div>
