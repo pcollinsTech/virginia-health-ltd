@@ -42,7 +42,6 @@ const data = [
 ]
 class PrivateIndex extends React.Component {
   render() {
-    console.log("POSTS", this.props)
     return (
       <Layout>
         <SEO title="Home" />

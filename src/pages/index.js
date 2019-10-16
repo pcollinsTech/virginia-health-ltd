@@ -13,7 +13,6 @@ import InTheNews from "../components/InTheNews"
 import banner from "../assets/images/bannerOne.png"
 class HomeIndex extends React.Component {
   render() {
-    console.log("POSTS", this.props)
     return (
       <Layout>
         <SEO title="Home" />

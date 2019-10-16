@@ -12,7 +12,6 @@ import InTheNews from "../components/InTheNews"
 
 import banner from "../assets/images/BannerOurBrands.png"
 const OurBrandsPage = props => {
-  console.log("IMAGES", props)
   return (
     <Layout>
       <SEO title="Our Brands" />

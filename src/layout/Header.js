@@ -120,7 +120,7 @@ class Header extends Component {
                   <SideNav />
                 </Nav.Item>
               </div>
-              <div className="mobile_view_nav">
+              <div className="mobile_view_nav mt-2">
                 <Nav.Item>
                   <Button variant="primary">
                     <Link to="tel:+(44) 121 288 3363">Call Now</Link>

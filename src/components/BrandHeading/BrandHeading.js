@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 
 const BrandHeading = ({ title, instaUrl, faceUrl, twitUrl }) => {
   return (
