@@ -8,7 +8,7 @@ import ContactUs from "../components/ContactUs"
 
 import banner from "../assets/images/compostabePackaging.png"
 import blankLabel from "../assets/images/blackLabel.png"
-import originGreen from "../assets/images/originGreenLogo.png"
+// import originGreen from "../assets/images/originGreenLogo.png"
 
 class CompostablePackagingPage extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class CompostablePackagingPage extends React.Component {
         <SEO title="Home" />
         <Banner
           img={banner}
-          imgtwo={originGreen}
+          // imgtwo={originGreen}
           title="New Home Compostable Packaging"
           subtitle="Quality and the Environment"
         />

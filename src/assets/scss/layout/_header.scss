@@ -22,8 +22,21 @@
 .navbar button {
   width: 200px;
   height: 38px;
+  @include breakpoint(medium) {
+    width: 100%;
+  }
 }
 
 .sticky-top {
   padding: 12px 55px;
+}
+
+.social_nav {
+  padding-top: 10px;
+  color: _palette(bg);
+  svg {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+  }
 }

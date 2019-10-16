@@ -70,14 +70,24 @@ a:hover span,
 a:hover {
   color: _palette(bg);
 }
-.mobile_view {
+.mobile_view,
+.mobile_view_nav {
   display: none;
 }
 @include breakpoint(small) {
   .remove_mobile {
-    display: none;
+    display: none !important;
   }
   .mobile_view {
+    display: inline-block;
+  }
+}
+
+@include breakpoint(medium) {
+  .remove_mobile a span {
+    display: none !important;
+  }
+  .mobile_view_nav {
     display: inline-block;
   }
 }

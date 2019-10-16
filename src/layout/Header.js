@@ -3,6 +3,13 @@ import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import SideNav from "./SideNav"
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa"
+
 class Header extends Component {
   render() {
     return (
@@ -107,10 +114,24 @@ class Header extends Component {
                   <Link to="/enquire">Enquire Now</Link>
                 </Button>
               </Nav.Item>
-              <Nav.Item>
-                {/* SideNav: src/components/SideNav */}
-                <SideNav />
-              </Nav.Item>
+              <div className="remove_mobile">
+                <Nav.Item>
+                  {/* SideNav: src/components/SideNav */}
+                  <SideNav />
+                </Nav.Item>
+              </div>
+              <div className="mobile_view_nav">
+                <Nav.Item>
+                  <Button variant="primary">
+                    <Link to="tel:+(44) 121 288 3363">Call Now</Link>
+                  </Button>
+                </Nav.Item>
+                <div className="social_nav text-right">
+                  <FaFacebookF />
+                  <FaTwitter />
+                  <FaInstagram />
+                </div>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
