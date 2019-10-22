@@ -69,14 +69,14 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <li>
-                <a
-                  href="https://www.facebook.com/virginiahealthfood/"
-                  target="__blank"
-                >
-                  <FaFacebookF />
-                </a>
-              </li>
+              <a
+                href="https://www.facebook.com/virginiahealthfood/"
+                target="__blank"
+              >
+                <FaFacebookF />
+              </a>
+            </li>
+            <li>
               <a
                 href="https://www.instagram.com/virginiaflaxseed/"
                 target="__blank"

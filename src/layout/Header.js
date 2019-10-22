@@ -55,10 +55,10 @@ class Header extends Component {
                   <Link to="/virginia-health-flaxseed">Virginia Health</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/virginia-health-flaxseed">Squbes</Link>
+                  <Link to="/squbes">Squbes</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/virginia-health-flaxseed">Helen's</Link>
+                  <Link to="/helens">Helen's</Link>
                 </NavDropdown.Item>
               </NavDropdown>
 

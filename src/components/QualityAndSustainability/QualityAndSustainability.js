@@ -7,7 +7,7 @@ const QualityAndSustainability = () => {
   return (
     <Container>
       <Row className="d-flex justify-content-between">
-        <div className="col-sm-5 pt-5">
+        <div className="col-sm-5 py-5">
           <h2 style={{ color: "white" }}>Quality and Sustainability</h2>
           <p>
             We use the expertise and know how of our technical, quality and

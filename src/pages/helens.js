@@ -43,7 +43,7 @@ const data = [
   },
 ]
 
-const VirginiaHealthPage = () => (
+const HelensPage = () => (
   <Layout>
     <SEO title="Our Brands" />
     <Banner imgOne={banner} titleOne="Health Food With a Difference" />
@@ -147,4 +147,4 @@ const VirginiaHealthPage = () => (
   </Layout>
 )
 
-export default VirginiaHealthPage
+export default HelensPage

@@ -7,14 +7,14 @@ import { Container, Row } from "react-bootstrap"
 import MeetTheExperts from "../components/MeetTheExperts"
 import ContactUs from "../components/ContactUs"
 
-import quality from "../assets/images/quality.png"
-import manufacture from "../assets/images/manufacture.png"
-import productDevelopment from "../assets/images/productDevelopment.png"
+import quality from "../assets/images/quality.jpeg"
+import manufacture from "../assets/images/manufacture.jpeg"
+import productDevelopment from "../assets/images/productDevelopment.jpeg"
 import banner from "../assets/images/whatWeDoBanner.png"
 
 const WhatWeDoPage = () => (
   <Layout>
-    <SEO title="Our Brands" />
+    <SEO title="What We Do" />
     <Banner img={banner} title="What We Do" />
     <Container className="my-5 how_we_do_it">
       <h2 className="text-center">How We Do It</h2>

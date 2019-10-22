@@ -44,7 +44,7 @@ class PrivateIndex extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home" />
+        <SEO title="Private Label" />
         <Banner
           imgOne={banner}
           imgTwo={banner}
@@ -53,13 +53,13 @@ class PrivateIndex extends React.Component {
           titleTwo="Private Label"
           titleThree="Private Label"
         />
-        <Container className="text-center my-5 private_label">
+        <Container className="my-5 private_label">
           <Row>
             <div className="col-sm-6">
               <img src={blankLabel} alt="Blank Label" />
             </div>
             <div className="col-sm-6">
-              <p>
+              <p className="my-5" style={{ fontSize: "18px" }}>
                 We use the expertise and know how of our technical, quality and
                 production teams to create value in your business. By developing
                 manufacturing and monitoring foods to the highest standards, we
