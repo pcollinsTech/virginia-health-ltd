@@ -16,8 +16,6 @@
   color: _palette(bg) !important;
   font-weight: bold;
 }
-.nav-item button {
-}
 
 .dropdown-toggle::after {
   display: none;
@@ -45,13 +43,4 @@
     width: 25px;
     height: 25px;
   }
-}
-
-.carousel-inner > .item {
-  position: relative;
-  display: none;
-  -webkit-transition: 1.2s ease-in-out left !important;
-  -moz-transition: 1.2s ease-in-out left !important;
-  -o-transition: 1.2s ease-in-out left !important;
-  transition: 1.2s ease-in-out left !important;
 }
