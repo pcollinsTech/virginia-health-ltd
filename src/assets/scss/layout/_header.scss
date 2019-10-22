@@ -7,12 +7,16 @@
 .nav-link {
   color: _palette(black);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
 }
 
 .nav-link:hover {
   color: _palette(bg) !important;
   font-weight: bold;
+}
+.nav-item button {
 }
 
 .dropdown-toggle::after {
@@ -20,9 +24,11 @@
 }
 
 .navbar button {
-  width: 200px;
+  margin-left: 20px;
+  width: 140px;
   height: 38px;
   @include breakpoint(medium) {
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -39,4 +45,13 @@
     width: 25px;
     height: 25px;
   }
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 1.2s ease-in-out left !important;
+  -moz-transition: 1.2s ease-in-out left !important;
+  -o-transition: 1.2s ease-in-out left !important;
+  transition: 1.2s ease-in-out left !important;
 }

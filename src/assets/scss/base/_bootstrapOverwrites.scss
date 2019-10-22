@@ -1,6 +1,7 @@
 .btn {
   border-radius: 0;
   width: 100%;
+  max-width: 348px;
 }
 
 .btn-primary {
@@ -28,4 +29,7 @@
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+.dropdown-item {
+  padding: 0.25rem 0.5rem !important;
 }

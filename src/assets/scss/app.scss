@@ -68,7 +68,7 @@ a:hover p,
 a:hover a,
 a:hover span,
 a:hover {
-  color: _palette(bg);
+  color: _palette(bg) !important;
 }
 .mobile_view,
 .mobile_view_nav {

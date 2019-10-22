@@ -13,11 +13,13 @@ const InTheNews = ({ posts }) => {
           })}
           <div className="text-center"></div>
         </div>
-        <Link to="/blog">
-          <button className="btn btn-primary text-center px-5">
-            Read More
-          </button>
-        </Link>
+        <div className="text-center">
+          <Link to="/blog">
+            <button className="btn btn-primary text-center px-5">
+              Read More
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   )

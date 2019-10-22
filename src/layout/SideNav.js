@@ -6,7 +6,7 @@ import {
   FaPhone,
   FaEnvelope,
   FaFacebookF,
-  FaTwitter,
+  FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa"
 
@@ -91,18 +91,18 @@ export class SideNav extends Component {
 
             <ul className="social-links">
               <li>
+                <a href={this.props.linkedinlink}>
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li>
                 <a href={this.props.facebooklink}>
                   <FaFacebookF />
                 </a>
               </li>
               <li>
-                <a href={this.props.twitterlink}>
-                  <FaTwitter />
-                </a>
-              </li>
-              <li>
-                <a href={this.props.linkedinlink}>
-                  <FaLinkedinIn />
+                <a href={this.props.instagramlink}>
+                  <FaInstagram />
                 </a>
               </li>
             </ul>
@@ -123,16 +123,14 @@ SideNav.PropsTypes = {
   mailbolot: PropTypes.string,
   mailnormal: PropTypes.string,
   facebooklink: PropTypes.string,
-  twitterlink: PropTypes.string,
   instagramlink: PropTypes.string,
   linkedinlink: PropTypes.string,
-  pinterestlink: PropTypes.string,
 }
 SideNav.defaultProps = {
   mailbolot: "info@virginiahealth.net",
   mailnormal: "Online support & enquiries",
-  facebooklink: "#",
-  twitterlink: "#",
-  linkedinlink: "#",
+  facebooklink: "https://www.facebook.com/virginiahealthfood/",
+  linkedinlink: "https://www.linkedin.com/company/virginiahealthfoods/",
+  instagramlink: "https://www.instagram.com/virginiaflaxseed/",
 }
 export default SideNav

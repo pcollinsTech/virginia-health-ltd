@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import brc from "../assets/images/brc.png"
 import vegetarian from "../assets/images/vegetarian.svg"
 import gluten from "../assets/images/gluten.png"
@@ -36,7 +36,7 @@ const Footer = () => (
         <div className="col-md-6 footer_item">
           <h5>Subscribe to our newsletter to hear about news and offers</h5>
           <form className="form-inline mt-2 d-flex justify-content-between">
-            <div className="form-group">
+            <div className="form-group flex-grow-1">
               <input
                 type="email"
                 className="form-control"
@@ -61,25 +61,27 @@ const Footer = () => (
           <h5>Follow us</h5>
           <ul className="container icons mt-2">
             <li>
-              <a href="https://twitter.com/DW_Agency" target="__blank">
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
               <a
-                href="https://www.facebook.com/digitalworksagency/"
-                target="__blank"
-              >
-                <FaFacebookF />
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.linkedin.com/company/digital-works-agency/"
+                href="https://www.linkedin.com/company/virginiahealthfoods/"
                 target="__blank"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <li>
+                <a
+                  href="https://www.facebook.com/virginiahealthfood/"
+                  target="__blank"
+                >
+                  <FaFacebookF />
+                </a>
+              </li>
+              <a
+                href="https://www.instagram.com/virginiaflaxseed/"
+                target="__blank"
+              >
+                <FaInstagram />
               </a>
             </li>
           </ul>

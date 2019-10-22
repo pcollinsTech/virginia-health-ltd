@@ -10,7 +10,7 @@ const data = [
     para:
       "Virginia Health Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
     buttonTitle: "Read More",
-    buttonLink: "",
+    buttonLink: "/virginia-health-flaxseed",
     title: "Virginia Health",
   },
   {
@@ -18,7 +18,7 @@ const data = [
     para:
       "Squbes Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
     buttonTitle: "Visit Website",
-    buttonLink: "",
+    buttonLink: "/squbes",
     title: "Squbes",
   },
   {
@@ -26,7 +26,7 @@ const data = [
     para:
       "Crunch & Cereals Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
     buttonTitle: "Read More",
-    buttonLink: "",
+    buttonLink: "/crunch-cereal",
     title: "Crunch",
   },
 ]
