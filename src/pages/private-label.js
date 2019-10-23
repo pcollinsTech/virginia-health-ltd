@@ -20,7 +20,7 @@ const data = [
     para:
       "Bespoke New Product Development of nutritious snacks and mixes to offer innovative quality products to your customers.",
     buttonTitle: "Select Your Options",
-    buttonLink: "",
+    buttonLink: "/milled-seed-and-nut-mixes",
     title: "Milled Seed and Nut Mixes",
   },
   {
@@ -28,7 +28,7 @@ const data = [
     para:
       "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
     buttonTitle: "Visit Website",
-    buttonLink: "Select Your Options",
+    buttonLink: "/snacks",
     title: "Snacks",
   },
   {
@@ -36,7 +36,7 @@ const data = [
     para:
       "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
     buttonTitle: "Select Your Options",
-    buttonLink: "",
+    buttonLink: "/crunch-and-cereal",
     title: "Crunch and Cereals",
   },
 ]

@@ -1,0 +1,21 @@
+.ingredient {
+  display: relative;
+  svg {
+    background-color: _palette(bg);
+    border: 50%;
+    color: white;
+  }
+}
+
+.ingredient img:hover {
+  overflow: hidden;
+  z-index: 2;
+}
+
+.tickIcon {
+  display: none;
+}
+
+.checked {
+  display: block !important;
+}
