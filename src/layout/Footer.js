@@ -12,19 +12,19 @@ const Footer = () => (
       <div className="row footer_container ">
         <div className="col-md-3 footer_item text-left">
           <p>
-            <Link to="contact-us">Contact Us</Link>
+            <Link to="/contact-us">Contact Us</Link>
           </p>
           <p>
-            <Link to="terms-and-conditions">Terms and Contitions</Link>
+            <Link to="/terms-and-conditions">Terms and Contitions</Link>
           </p>
           <p>
-            <Link to="privacy-policy">Privacy Policy</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </p>
           <p>
-            <Link to="cooklies-policy">Cookies Policy</Link>
+            <Link to="/cooklies-policy">Cookies Policy</Link>
           </p>
           <p>
-            <Link to="stockists">Stockists</Link>
+            <Link to="/stockists">Stockists</Link>
           </p>
 
           <div className="mt-4 partners">

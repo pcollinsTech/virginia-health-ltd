@@ -8,7 +8,7 @@ const RowThreeCards = ({ img, para, buttonTitle, buttonLink, title }) => {
       <h3>{title}</h3>
       <p>{para}</p>
       <button className="btn btn-primary">
-        <Link to={buttonLink}>{buttonTitle}</Link>
+        <Link to={`/${buttonLink}`}>{buttonTitle}</Link>
       </button>
     </div>
   )

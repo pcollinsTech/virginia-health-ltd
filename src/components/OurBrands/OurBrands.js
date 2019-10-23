@@ -18,7 +18,7 @@ const data = [
     para:
       "Squbes Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
     buttonTitle: "Visit Website",
-    buttonLink: "/squbes",
+    buttonLink: "http://www.squbes.ie",
     title: "Squbes",
   },
   {

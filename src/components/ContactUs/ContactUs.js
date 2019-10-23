@@ -53,7 +53,7 @@ const ContactUs = () => {
               </p>
             </div>
           </div>
-          <Link to="">
+          <Link to="/">
             <button className="btn btn-primary">Enquire Now</button>
           </Link>
         </div>

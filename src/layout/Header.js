@@ -3,12 +3,7 @@ import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import SideNav from "./SideNav"
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa"
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 
 class Header extends Component {
   render() {
@@ -55,26 +50,30 @@ class Header extends Component {
                   <Link to="/virginia-health-flaxseed">Virginia Health</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/squbes">Squbes</Link>
+                  <a href="http://www.squbes.ie" target="__blank">
+                    Squbes
+                  </a>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/helens">Helen's</Link>
+                  <a href="https://www.foodbyhelen.com" target="__blank">
+                    Helen's
+                  </a>
                 </NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Private Label">
                 <NavDropdown.Item>
-                  <Link to="private-label" onClick={this.closeNavbar}>
+                  <Link to="/private-label" onClick={this.closeNavbar}>
                     Private Label
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="crunch-and-cereal" onClick={this.closeNavbar}>
+                  <Link to="/crunch-and-cereal" onClick={this.closeNavbar}>
                     Crunch &amp; Cereal
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="snacks" onClick={this.closeNavbar}>
+                  <Link to="/snacks" onClick={this.closeNavbar}>
                     Snacks
                   </Link>
                 </NavDropdown.Item>
@@ -123,7 +122,7 @@ class Header extends Component {
               <div className="mobile_view_nav mt-2">
                 <Nav.Item>
                   <Button variant="primary">
-                    <Link to="tel:+(44) 121 288 3363">Call Now</Link>
+                    <a href="tel:+(44) 121 288 3363">Call Now</a>
                   </Button>
                 </Nav.Item>
                 <div className="social_nav text-right">

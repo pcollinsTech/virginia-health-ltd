@@ -4,7 +4,7 @@ import Card from "./Card"
 const RowThreeCards = ({ data }) => {
   return (
     <Row className="d-flex justify-content-between pb-5 row_three_cards">
-      {data.map(item => {
+      {data.map((item, index) => {
         return (
           <Card
             img={item.img}
@@ -12,6 +12,7 @@ const RowThreeCards = ({ data }) => {
             buttonTitle={item.buttonTitle}
             buttonLink={item.buttonLink}
             title={item.title}
+            key={index}
           />
         )
       })}

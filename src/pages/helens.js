@@ -9,7 +9,7 @@ import WorkWith from "../components/WorkWith"
 import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/virginiaHealthFlaxseedBanner.png"
+import banner from "../assets/images/virginiaBanner.png"
 import RowThreeCards from "../components/RowThreeCards"
 
 import nutty from "../assets/images/nutty.png"
