@@ -25,7 +25,7 @@ const QualityAndSustainability = () => {
           your breakfast.
         </p>
         <button className="btn btn-primary">
-          <Link to="">Read More</Link>
+          <Link to="/virginia-health-flaxseed">Read More</Link>
         </button>
       </div>
     </div>

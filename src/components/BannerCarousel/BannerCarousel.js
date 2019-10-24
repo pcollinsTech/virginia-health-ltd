@@ -11,7 +11,7 @@ const BannerCarousel = ({
 }) => {
   return (
     <div>
-      <Carousel>
+      <Carousel interval="6000">
         <Carousel.Item>
           <img className="d-block w-100" src={imgOne} alt="First slide" />
           <Carousel.Caption>
