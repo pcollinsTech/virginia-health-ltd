@@ -94,9 +94,12 @@
             display: inline-block;
 
             a {
-              color: #0b9444;
+              color: _palette(bg);
               margin-right: 10px;
               font-size: 18px;
+            }
+            a:hover {
+              color: _palette(bg-alt) !important;
             }
           }
         }

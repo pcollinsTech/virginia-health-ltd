@@ -11,6 +11,7 @@ import UniqueSellingPoints from "../components/UniqueSellingPoints"
 import SelectPackaging from "../components/SelectPackaging"
 
 import nutsSeeds from "../assets/images/ingredients/nutsSeeds.png"
+import cerealAndCrunch from "../assets/images/ingredients/cerealAndCrunch.png"
 import fruitsAndBerries from "../assets/images/ingredients/fruitsAndBerries.png"
 import functional from "../assets/images/ingredients/functional.png"
 import herbsAndSpices from "../assets/images/ingredients/herbsAndSpices.png"
@@ -23,9 +24,13 @@ import bagInBox from "../assets/images/packaging/bagInBox.png"
 import shelfReadyDisplay from "../assets/images/packaging/shelfReadyDisplay.png"
 import can from "../assets/images/packaging/can.png"
 
-import banner from "../assets/images/mixSeedsBanner.png"
+import banner from "../assets/images/crunchCerealsBanner.png"
 
 const ingredientsData = [
+  {
+    img: cerealAndCrunch,
+    title: "Crunch & Cereals",
+  },
   {
     img: nutsSeeds,
     title: "Nuts & Seeds",
@@ -80,11 +85,11 @@ const packagingData = [
 const CrunchAndCerealForm = () => {
   return (
     <Layout>
-      <SEO title="Our Brands" />
-      <Banner img={banner} title="Milled Seed and Nut Mixes" />
+      <SEO title="Crunch and Cereals" />
+      <Banner img={banner} title="Crunch and Cereals" />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
-        <UniqueSellingPoints fish={true} />
+        <UniqueSellingPoints fish={false} />
         <SelectPackaging data={packagingData} />
         <form className="d-flex justify-content-between flex-column">
           <div className="form-group">

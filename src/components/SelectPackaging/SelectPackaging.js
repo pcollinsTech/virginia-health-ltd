@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { Row } from "react-bootstrap"
+import { FaCheckCircle } from "react-icons/fa"
 
 const SelectPackaging = ({ data }) => {
   return (
@@ -9,12 +10,13 @@ const SelectPackaging = ({ data }) => {
         Small sentance here about packaging maybe something about sustainability
         or longevity of product?
       </p>
-      <Row className="my-5">
+      <Row className="my-5 justify-content-md-center">
         {data.map(ingredient => {
           return (
-            <div className="col-sm">
+            <div className="col-sm-3 packaging">
               <img src={ingredient.img} alt={ingredient.title} />
-              <h2>{ingredient.title}</h2>
+              <FaCheckCircle />
+              <h3>{ingredient.title}</h3>
             </div>
           )
         })}

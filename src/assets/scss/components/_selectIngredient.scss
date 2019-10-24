@@ -1,9 +1,18 @@
 .ingredient {
   display: relative;
+  display: inline-block;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
   svg {
-    background-color: _palette(bg);
+    position: absolute;
+    top: 5px;
+    right: 20px;
     border: 50%;
-    color: white;
+    color: _palette(bg);
+    font-size: 25px;
   }
 }
 

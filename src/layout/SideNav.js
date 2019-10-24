@@ -91,17 +91,17 @@ export class SideNav extends Component {
 
             <ul className="social-links">
               <li>
-                <a href={this.props.linkedinlink}>
+                <a href={this.props.linkedinlink} target="__blank">
                   <FaLinkedinIn />
                 </a>
               </li>
               <li>
-                <a href={this.props.facebooklink}>
+                <a href={this.props.facebooklink} target="__blank">
                   <FaFacebookF />
                 </a>
               </li>
               <li>
-                <a href={this.props.instagramlink}>
+                <a href={this.props.instagramlink} target="__blank">
                   <FaInstagram />
                 </a>
               </li>

@@ -1,0 +1,19 @@
+.packaging {
+  display: relative;
+  display: inline-block;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  img:hover {
+  }
+  svg {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    border: 50%;
+    color: white;
+    font-size: 25px;
+  }
+}
