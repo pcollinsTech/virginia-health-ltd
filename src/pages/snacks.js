@@ -1,9 +1,9 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
-import { Container } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import WorkWith from "../components/WorkWith"
 import ContactUs from "../components/ContactUs"
 import SelectIngredients from "../components/SelectIngredients"
@@ -11,6 +11,8 @@ import UniqueSellingPoints from "../components/UniqueSellingPoints"
 import SelectPackaging from "../components/SelectPackaging"
 
 import nutsSeeds from "../assets/images/ingredients/nutsSeeds.png"
+import cereals from "../assets/images/ingredients/cereals.png"
+import chocolate from "../assets/images/ingredients/chocolate.png"
 import fruitsAndBerries from "../assets/images/ingredients/fruitsAndBerries.png"
 import functional from "../assets/images/ingredients/functional.png"
 import herbsAndSpices from "../assets/images/ingredients/herbsAndSpices.png"
@@ -19,17 +21,24 @@ import proteins from "../assets/images/ingredients/proteins.png"
 import serveSachet from "../assets/images/packaging/serveSachet.png"
 import doyPouch from "../assets/images/packaging/doyPouch.png"
 import pillowPack from "../assets/images/packaging/pillowPack.png"
-import bagInBox from "../assets/images/packaging/bagInBox.png"
 import shelfReadyDisplay from "../assets/images/packaging/shelfReadyDisplay.png"
-import can from "../assets/images/packaging/can.png"
 
-import banner from "../assets/images/mixSeedsBanner.png"
+import balls from "../assets/images/shapes/ball.png"
+import bites from "../assets/images/shapes/cube.png"
+import discs from "../assets/images/shapes/cube.png"
+
+import banner from "../assets/images/snacksBanner.png"
 
 const ingredientsData = [
   {
     img: nutsSeeds,
     title: "Nuts & Seeds",
   },
+  {
+    img: cereals,
+    title: "Cereals",
+  },
+
   {
     img: fruitsAndBerries,
     title: "Fruits & Berries, Vegetables",
@@ -46,6 +55,10 @@ const ingredientsData = [
   {
     img: functional,
     title: "Functional Ingredients",
+  },
+  {
+    img: chocolate,
+    title: "Chocolate & Caramel",
   },
 ]
 
@@ -64,27 +77,36 @@ const packagingData = [
     title: "Sharing pillow pack",
   },
   {
-    img: bagInBox,
-    title: "Bag in Box",
-  },
-  {
     img: shelfReadyDisplay,
     title: "Shelf ready display",
-  },
-  {
-    img: can,
-    title: "Composite Can",
   },
 ]
 
 const SnacksForm = () => {
   return (
     <Layout>
-      <SEO title="Our Brands" />
-      <Banner img={banner} title="Milled Seed and Nut Mixes" />
+      <SEO title="Snacks" />
+      <Banner img={banner} title="Snacks of all Shapes and Sizes" />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
-        <UniqueSellingPoints fish={true} />
+        <UniqueSellingPoints fish={false} />
+        <Fragment>
+          <h2>Select your Unique Shape</h2>
+          <Row className="my-5 justify-content-md-center">
+            <div className="col-sm-3">
+              <img src={bites} alt="" />
+              <h3>Bites</h3>
+            </div>
+            <div className="col-sm-3">
+              <img src={balls} alt="" />
+              <h3>Balls</h3>
+            </div>
+            <div className="col-sm-3">
+              <img src={discs} alt="" />
+              <h3>Discs</h3>
+            </div>
+          </Row>
+        </Fragment>
         <SelectPackaging data={packagingData} />
         <form className="d-flex justify-content-between flex-column">
           <div className="form-group">
