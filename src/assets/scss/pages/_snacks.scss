@@ -1,0 +1,12 @@
+.blue_square {
+  background-color: _palette(bg-alt);
+  color: white;
+  height: 255px;
+  width: 255px;
+  &:hover {
+    background-color: _palette(bg);
+  }
+  h2 {
+    line-height: 255px;
+  }
+}

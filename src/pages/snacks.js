@@ -1,9 +1,10 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
+import { FaCheckCircle } from "react-icons/fa"
+import { Container, Row } from "react-bootstrap"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
-import { Container, Row } from "react-bootstrap"
 import WorkWith from "../components/WorkWith"
 import ContactUs from "../components/ContactUs"
 import SelectIngredients from "../components/SelectIngredients"
@@ -93,17 +94,43 @@ const SnacksForm = () => {
         <Fragment>
           <h2>Select your Unique Shape</h2>
           <Row className="my-5 justify-content-md-center">
-            <div className="col-sm-3">
+            <div className="col-sm-3 ingredient">
               <img src={bites} alt="" />
+              <FaCheckCircle />
               <h3>Bites</h3>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-3 ingredient">
               <img src={balls} alt="" />
+              <FaCheckCircle />
               <h3>Balls</h3>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-3 ingredient">
               <img src={discs} alt="" />
+              <FaCheckCircle />
               <h3>Discs</h3>
+            </div>
+          </Row>
+        </Fragment>
+        <Fragment>
+          <h2>Select your Texture</h2>
+          <Row className="my-5 justify-content-md-center">
+            <div className="col-sm-3 ingredient">
+              <div className="blue_square">
+                <h2>Crunchy</h2>
+              </div>
+              <FaCheckCircle />
+            </div>
+            <div className="col-sm-3 ingredient">
+              <div className="blue_square">
+                <h2>Chewy</h2>
+              </div>
+              <FaCheckCircle />
+            </div>
+            <div className="col-sm-3 ingredient">
+              <div className="blue_square">
+                <h2>Soft</h2>
+              </div>
+              <FaCheckCircle />
             </div>
           </Row>
         </Fragment>
