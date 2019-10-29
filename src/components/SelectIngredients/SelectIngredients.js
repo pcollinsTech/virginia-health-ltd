@@ -31,7 +31,7 @@ const SelectIngredients = ({ data }) => {
     })
   }
   useEffect(data => {
-    renderIngredients(data)
+    // renderIngredients(data)
   }, [])
 
   const tick = ingredient =>
