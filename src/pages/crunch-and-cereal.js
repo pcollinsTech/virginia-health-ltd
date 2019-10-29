@@ -28,27 +28,33 @@ import banner from "../assets/images/crunchCerealsBanner.png"
 
 const ingredientsData = [
   {
+    id: "cerealAndCrunch01",
     img: cerealAndCrunch,
     title: "Crunch & Cereals",
   },
   {
+    id: "nutsSeeds02",
     img: nutsSeeds,
     title: "Nuts & Seeds",
   },
   {
+    id: "fruitsAndBerries03",
     img: fruitsAndBerries,
     title: "Fruits & Berries, Vegetables",
   },
 
   {
+    id: "herbsAndSpices04",
     img: herbsAndSpices,
     title: "Herbs, Spices & Flavours",
   },
   {
+    id: "proteins05",
     img: proteins,
     title: "Proteins",
   },
   {
+    id: "functional06",
     img: functional,
     title: "Functional Ingredients",
   },
