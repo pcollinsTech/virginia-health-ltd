@@ -17,11 +17,11 @@ import {
 
 const EnquiryState = props => {
   const inititalState = {
-    ingredients: [],
-    usps: [],
-    packagings: [],
-    shapes: [],
-    textures: [],
+    ingredients: [{}],
+    usps: [{}],
+    packagings: [{}],
+    shapes: [{}],
+    textures: [{}],
   }
 
   const [state, dispatch] = useReducer(EnquiryReducer, inititalState)
