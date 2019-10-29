@@ -33,3 +33,10 @@
 .dropdown-item {
   padding: 0.25rem 0.5rem !important;
 }
+.dropdown-item:hover {
+  background-color: _palette(bg);
+  a:hover,
+  a {
+    color: _palette(bg-alt) !important;
+  }
+}
