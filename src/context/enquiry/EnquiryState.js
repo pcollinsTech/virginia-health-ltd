@@ -44,7 +44,7 @@ const EnquiryState = props => {
   const addUsp = usp => {
     let newUsps = [...state.usps, usp]
     dispatch({
-      type: ADD_INGREDIENT,
+      type: ADD_USP,
       payload: newUsps,
     })
   }

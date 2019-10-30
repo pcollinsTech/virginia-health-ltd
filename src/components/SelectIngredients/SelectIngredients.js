@@ -1,24 +1,19 @@
-import React, { Fragment, useContext, useEffect } from "react"
+import React, { Fragment, useContext } from "react"
 import { Row } from "react-bootstrap"
-import { FaCheckCircle } from "react-icons/fa"
+
 import EnquiryContext from "../../context/enquiry/enquiryContext"
-import containsObject from "../../helpers/containsObject"
+import { containsObject, tick } from "../../helpers/helpers"
 
 const SelectIngredients = ({ data }) => {
   const enquiryContext = useContext(EnquiryContext)
 
   const { ingredients, addIngredient, removeIngredient } = enquiryContext
 
-  const handleSelect = (event, ingredient) => {
+  const handleSelect = ingredient => {
     containsObject(ingredient, ingredients)
       ? removeIngredient(ingredient)
       : addIngredient(ingredient)
-
-    console.log("INGREDIENTS", ingredients)
   }
-
-  const tick = ingredient =>
-    containsObject(ingredient, ingredients) ? <FaCheckCircle /> : ""
 
   return (
     <Fragment>
@@ -29,10 +24,10 @@ const SelectIngredients = ({ data }) => {
           return (
             <div
               className="col-sm-3 ingredient"
-              onClick={e => handleSelect(e, ingredient)}
+              onClick={e => handleSelect(ingredient)}
             >
               <img src={ingredient.img} alt={ingredient.title} />
-              {tick(ingredient)}
+              {tick(ingredient, ingredients)}
               <h3>{ingredient.title}</h3>
             </div>
           )

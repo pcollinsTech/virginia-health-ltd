@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useContext } from "react"
 import { Link } from "gatsby"
 import { FaCheckCircle } from "react-icons/fa"
 import { Container, Row } from "react-bootstrap"
@@ -28,6 +28,8 @@ import balls from "../assets/images/shapes/ball.png"
 import bites from "../assets/images/shapes/cube.png"
 import discs from "../assets/images/shapes/cube.png"
 
+import EnquiryContext from "../context/enquiry/enquiryContext"
+import { containsObject, tick } from "../helpers/helpers"
 import banner from "../assets/images/snacksBanner.png"
 
 const ingredientsData = [
@@ -83,7 +85,34 @@ const packagingData = [
   },
 ]
 
+const textureData = [
+  { img: bites, title: "Bites" },
+  { img: balls, title: "Balls" },
+  { img: discs, title: "Discs" },
+]
+
+const shapeData = [{ title: "Crunchy" }, { title: "Chewy" }, { title: "Soft" }]
 const SnacksForm = () => {
+  const enquiryContext = useContext(EnquiryContext)
+
+  const {
+    shapes,
+    textures,
+    addShape,
+    removeShape,
+    addTexture,
+    removeTexture,
+  } = enquiryContext
+
+  const handleShapeSelect = shape => {
+    containsObject(shape, shapes) ? removeShape(shape) : addShape(shape)
+  }
+
+  const handleTextureSelect = texture => {
+    containsObject(texture, textures)
+      ? removeTexture(texture)
+      : addTexture(texture)
+  }
   return (
     <Layout>
       <SEO title="Snacks" />
@@ -94,44 +123,36 @@ const SnacksForm = () => {
         <Fragment>
           <h2>Select your Unique Shape</h2>
           <Row className="my-5 justify-content-md-center">
-            <div className="col-sm-3 ingredient">
-              <img src={bites} alt="" />
-              <FaCheckCircle />
-              <h3>Bites</h3>
-            </div>
-            <div className="col-sm-3 ingredient">
-              <img src={balls} alt="" />
-              <FaCheckCircle />
-              <h3>Balls</h3>
-            </div>
-            <div className="col-sm-3 ingredient">
-              <img src={discs} alt="" />
-              <FaCheckCircle />
-              <h3>Discs</h3>
-            </div>
+            {textureData.map(texture => {
+              return (
+                <div
+                  className="col-sm-3 ingredient"
+                  onClick={e => handleTextureSelect(texture)}
+                >
+                  <img src={texture.img} alt="" />
+                  {tick(texture, textures)}
+                  <h3>{texture.title}</h3>
+                </div>
+              )
+            })}
           </Row>
         </Fragment>
         <Fragment>
           <h2>Select your Texture</h2>
           <Row className="my-5 justify-content-md-center">
-            <div className="col-sm-3 ingredient">
-              <div className="blue_square">
-                <h2>Crunchy</h2>
-              </div>
-              <FaCheckCircle />
-            </div>
-            <div className="col-sm-3 ingredient">
-              <div className="blue_square">
-                <h2>Chewy</h2>
-              </div>
-              <FaCheckCircle />
-            </div>
-            <div className="col-sm-3 ingredient">
-              <div className="blue_square">
-                <h2>Soft</h2>
-              </div>
-              <FaCheckCircle />
-            </div>
+            {shapeData.map(shape => {
+              return (
+                <div
+                  className="col-sm-3 ingredient"
+                  onClick={e => handleShapeSelect(shape)}
+                >
+                  <div className="blue_square">
+                    <h2>{shape.title}</h2>
+                  </div>
+                  {tick(shape, shapes)}
+                </div>
+              )
+            })}
           </Row>
         </Fragment>
         <SelectPackaging data={packagingData} />
