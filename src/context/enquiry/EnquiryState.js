@@ -27,32 +27,29 @@ const EnquiryState = props => {
   const [state, dispatch] = useReducer(EnquiryReducer, inititalState)
 
   const addIngredient = ingredient => {
-    console.log("Adding Ingredient", ingredient)
+    let newIngredients = [...state.ingredients, ingredient]
     dispatch({
       type: ADD_INGREDIENT,
-      payload: ingredient,
+      payload: newIngredients,
     })
   }
 
   const removeIngredient = ingredient => {
-    console.log("Removing Ingredient", ingredient)
     dispatch({
       type: REMOVE_INGREDIENT,
       payload: ingredient,
     })
-    console.log("INGRDIENTS dispatch", state.ingredients)
   }
 
   const addUsp = usp => {
-    console.log("Adding usp", usp)
+    let newUsps = [...state.usps, usp]
     dispatch({
-      type: ADD_USP,
-      payload: usp,
+      type: ADD_INGREDIENT,
+      payload: newUsps,
     })
   }
 
   const removeUsp = usp => {
-    console.log("Removing usp", usp)
     dispatch({
       type: REMOVE_USP,
       payload: usp,
@@ -60,15 +57,14 @@ const EnquiryState = props => {
   }
 
   const addShape = shape => {
-    console.log("Adding shape", shape)
+    let newShapes = [...state.shapes, shape]
     dispatch({
       type: ADD_SHAPE,
-      payload: shape,
+      payload: newShapes,
     })
   }
 
   const removeShape = shape => {
-    console.log("Removing shape", shape)
     dispatch({
       type: REMOVE_SHAPE,
       payload: shape,
@@ -76,30 +72,28 @@ const EnquiryState = props => {
   }
 
   const addPackaging = packaging => {
-    console.log("Adding packaging", packaging)
+    let newPackagings = [...state.packagings, packaging]
     dispatch({
       type: ADD_PACKAGING,
-      payload: packaging,
+      payload: newPackagings,
     })
   }
 
   const removePackaging = packaging => {
-    console.log("Removing packaging", packaging)
     dispatch({
       type: REMOVE_PACKAGING,
       payload: packaging,
     })
   }
   const addTexture = texture => {
-    console.log("Adding texture", texture)
+    let newTextures = [...state.textures, texture]
     dispatch({
       type: ADD_TEXTURE,
-      payload: texture,
+      payload: newTextures,
     })
   }
 
   const removeTexture = texture => {
-    console.log("Removing texture", texture)
     dispatch({
       type: REMOVE_TEXTURE,
       payload: texture,

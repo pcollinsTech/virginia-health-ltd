@@ -16,23 +16,6 @@ const SelectIngredients = ({ data }) => {
 
     console.log("INGREDIENTS", ingredients)
   }
-  const renderIngredients = data => {
-    return data.map(ingredient => {
-      return (
-        <div
-          className="col-sm-3 ingredient"
-          onClick={e => handleSelect(e, ingredient)}
-        >
-          <img src={ingredient.img} alt={ingredient.title} />
-          {tick(ingredient)}
-          <h3>{ingredient.title}</h3>
-        </div>
-      )
-    })
-  }
-  useEffect(data => {
-    // renderIngredients(data)
-  }, [])
 
   const tick = ingredient =>
     containsObject(ingredient, ingredients) ? <FaCheckCircle /> : ""
@@ -42,7 +25,18 @@ const SelectIngredients = ({ data }) => {
       <h2>Select your ingredients</h2>
       <p>Innovative shelf stable Milled Seed, Nut and Protein mixes</p>
       <Row className="my-5 justify-content-md-center">
-        {renderIngredients(data)}
+        {data.map(ingredient => {
+          return (
+            <div
+              className="col-sm-3 ingredient"
+              onClick={e => handleSelect(e, ingredient)}
+            >
+              <img src={ingredient.img} alt={ingredient.title} />
+              {tick(ingredient)}
+              <h3>{ingredient.title}</h3>
+            </div>
+          )
+        })}
       </Row>
     </Fragment>
   )
