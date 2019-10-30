@@ -22,7 +22,7 @@ export default (state, action) => {
       return {
         ...state,
         ingredients: state.ingredients.filter(
-          ingredient => ingredient.id !== action.payload.id
+          ingredient => ingredient.title !== action.payload.title
         ),
       }
     case ADD_USP:
@@ -33,9 +33,7 @@ export default (state, action) => {
     case REMOVE_USP:
       return {
         ...state,
-        usps: state.usps.filter(
-          ingredient => ingredient.id !== action.payload.id
-        ),
+        usps: state.usps.filter(usp => usp.title !== action.payload.title),
       }
     case ADD_SHAPE:
       return {
@@ -46,7 +44,7 @@ export default (state, action) => {
       return {
         ...state,
         shapes: state.shapes.filter(
-          ingredient => ingredient.id !== action.payload.id
+          shape => shape.title !== action.payload.title
         ),
       }
     case ADD_TEXTURE:
@@ -58,7 +56,7 @@ export default (state, action) => {
       return {
         ...state,
         textures: state.textures.filter(
-          ingredient => ingredient.id !== action.payload.id
+          texture => texture.title !== action.payload.title
         ),
       }
     case ADD_PACKAGING:
@@ -70,7 +68,7 @@ export default (state, action) => {
       return {
         ...state,
         packagings: state.packagings.filter(
-          ingredient => ingredient.id !== action.payload.id
+          packaging => packaging.title !== action.payload.title
         ),
       }
 
