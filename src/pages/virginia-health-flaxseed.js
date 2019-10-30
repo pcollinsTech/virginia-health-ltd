@@ -48,7 +48,7 @@ const VirginiaHealthPage = () => {
   return (
     <Layout>
       <SEO title="Our Brands" />
-      <Banner imgOne={banner} titleOne="Health Food With a Difference" />
+      <Banner img={banner} title="Health Food With a Difference" />
       <Container className="text-center my-5">
         <Row>
           <div className="col-sm-4">

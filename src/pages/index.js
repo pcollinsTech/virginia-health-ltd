@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
-import Banner from "../components/BannerCarousel"
+import BannerCarousel from "../components/BannerCarousel"
 import { Container, Row } from "react-bootstrap"
 import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"
@@ -16,7 +16,7 @@ class HomeIndex extends React.Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner
+        <BannerCarousel
           imgOne={banner}
           imgTwo={banner}
           imgThree={banner}
