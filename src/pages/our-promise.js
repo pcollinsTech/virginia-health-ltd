@@ -16,7 +16,6 @@ class OurPromisePage extends React.Component {
         <SEO title="Home" />
         <Banner
           img={banner}
-          // imgtwo={originGreen}
           title="Our Promise to you"
           subtitle="Quality and the Environment"
         />
