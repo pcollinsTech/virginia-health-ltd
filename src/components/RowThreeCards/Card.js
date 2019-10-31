@@ -14,7 +14,9 @@ const RowThreeCards = ({ img, para, buttonTitle, buttonLink, title }) => {
       <img src={img} alt="" />
       <h3>{title}</h3>
       <p>{para}</p>
-      <button className="btn btn-primary">{link}</button>
+      <div className=" text-center">
+        <button className="btn btn-primary">{link}</button>
+      </div>
     </div>
   )
 }

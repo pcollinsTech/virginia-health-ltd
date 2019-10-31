@@ -13,4 +13,10 @@
       max-width: 100%;
     }
   }
+
+  @include breakpoint(small) {
+    .brand_item {
+      margin-bottom: 20px;
+    }
+  }
 }

@@ -21,55 +21,51 @@ const WorkWith = () => {
     <Container className="py-5">
       <h2 className="text-center">Who We Work With</h2>
       <Row>
-        <Col>
+        <div className="col-sm-5ths">
           <img src={ocado} alt="Ocado" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={sainsburys} alt="Sainsbury's" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={asda} alt="Asda" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={rossman} alt="Rossman" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={londis} alt="Londis" />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={waitrose} alt="Waitrose" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={lidl} alt="Lidl" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={supervalue} alt="Supervalue" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={aldi} alt="Aldi" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={edeka} alt="Edeka" />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={spar} alt="Spar" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={bwg} alt="BWG" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={mace} alt="Mace" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={rewe} alt="REWE" />
-        </Col>
-        <Col>
+        </div>
+        <div className="col-sm-5ths">
           <img src={inish} alt="Inish Pharmacy" />
-        </Col>
+        </div>
       </Row>
     </Container>
   )

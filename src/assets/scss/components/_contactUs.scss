@@ -11,4 +11,9 @@
   form {
     min-height: 100%;
   }
+  @include breakpoint(small) {
+    .col-sm-7 {
+      margin-bottom: 20px;
+    }
+  }
 }
