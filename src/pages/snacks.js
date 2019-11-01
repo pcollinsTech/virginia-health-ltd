@@ -112,7 +112,7 @@ const SnacksForm = () => {
       ? removeTexture(texture)
       : addTexture(texture)
   }
-  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Snacks" />
@@ -198,12 +198,8 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "snacksBanner.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 393) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

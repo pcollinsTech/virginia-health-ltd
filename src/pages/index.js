@@ -9,19 +9,14 @@ import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
-import Img from "gatsby-image"
 
 class HomeIndex extends React.Component {
   render() {
-    console.log("PROPS", this.props)
-    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
     return (
       <Layout>
         <SEO title="Home" />
         <BannerCarousel
-          imgOne={img}
-          imgTwo={img}
-          imgThree={img}
+          img={this.props.data.file.childImageSharp.fluid}
           titleOne="Health Food With a Difference"
           titleTwo="Health Food With a Difference"
           titleThree="Health Food With a Difference"
@@ -77,12 +72,8 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "bannerOne.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 400) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

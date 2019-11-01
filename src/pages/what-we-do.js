@@ -14,7 +14,7 @@ import manufacture from "../assets/images/manufacture.jpeg"
 import productDevelopment from "../assets/images/productDevelopment.jpeg"
 
 const WhatWeDoPage = () => {
-  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="What We Do" />
@@ -96,12 +96,8 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "whatWeDoBanner.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 393) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

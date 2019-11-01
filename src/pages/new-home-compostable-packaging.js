@@ -12,7 +12,7 @@ import blankLabel from "../assets/images/blackLabel.png"
 
 class CompostablePackagingPage extends React.Component {
   render() {
-    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+    const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
 
     return (
       <Layout>
@@ -129,12 +129,8 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "compostabePackaging.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 393) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

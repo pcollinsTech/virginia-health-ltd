@@ -9,10 +9,15 @@ import { Row, Container } from "react-bootstrap"
 import Img from "gatsby-image"
 class Blog extends React.Component {
   render() {
-    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+    const img = (
+      <Img
+        fluid={this.props.data.file.childImageSharp.fluid}
+        placeholderStyle={{ backgroundColor: `black` }}
+      />
+    )
     return (
       <Layout>
-        <SEO title="Home" />
+        <SEO title="Blog" />
         <Banner title="In The News" img={img} />
         <Container>
           <Row>
@@ -67,12 +72,8 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "BlogBanner.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 393) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

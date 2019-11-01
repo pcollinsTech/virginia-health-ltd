@@ -8,7 +8,7 @@ import { Container, Row } from "react-bootstrap"
 
 class TermsAndConditions extends React.Component {
   render() {
-    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+    const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
     return (
       <Layout>
         <SEO title="Home" />
@@ -90,12 +90,8 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "bannerOne.png" }) {
       childImageSharp {
-        fixed(width: 1048, height: 393) {
-          base64
-          width
-          height
-          src
-          srcSet
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
