@@ -87,8 +87,8 @@ const packagingData = [
   },
 ]
 
-const CrunchAndCerealForm = () => {
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+const CrunchAndCerealForm = ({ data }) => {
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Crunch and Cereals" />

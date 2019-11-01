@@ -6,7 +6,7 @@ import { Container, Row } from "react-bootstrap"
 
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-class TermsAndConditions extends React.Component {
+class CookiesPage extends React.Component {
   render() {
     const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
     return (
@@ -70,7 +70,7 @@ class TermsAndConditions extends React.Component {
   }
 }
 
-export default TermsAndConditions
+export default CookiesPage
 
 export const pageQuery = graphql`
   query {

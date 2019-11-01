@@ -13,8 +13,8 @@ import quality from "../assets/images/quality.jpeg"
 import manufacture from "../assets/images/manufacture.jpeg"
 import productDevelopment from "../assets/images/productDevelopment.jpeg"
 
-const WhatWeDoPage = () => {
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+const WhatWeDoPage = ({ data }) => {
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="What We Do" />

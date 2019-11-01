@@ -44,8 +44,8 @@ const data = [
   },
 ]
 
-const VirginiaHealthPage = () => {
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+const VirginiaHealthPage = ({ data }) => {
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Our Brands" />
