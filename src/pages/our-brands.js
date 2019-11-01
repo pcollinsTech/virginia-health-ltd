@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import BannerCarousel from "../components/BannerCarousel"
@@ -10,15 +11,16 @@ import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
-import banner from "../assets/images/BannerOurBrands.png"
 const OurBrandsPage = props => {
+  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+
   return (
     <Layout>
       <SEO title="Our Brands" />
       <BannerCarousel
-        imgOne={banner}
-        imgTwo={banner}
-        imgThree={banner}
+        imgOne={img}
+        imgTwo={img}
+        imgThree={img}
         titleOne="Our Brands"
         titleTwo="Our Brands"
         titleThree="Our Brands"
@@ -68,6 +70,17 @@ export const pageQuery = graphql`
           featured_media {
             source_url
           }
+        }
+      }
+    }
+    file(relativePath: { eq: "BannerOurBrands.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
         }
       }
     }

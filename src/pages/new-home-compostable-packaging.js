@@ -1,22 +1,24 @@
 import React from "react"
 import Layout from "../layout/Layout"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
 import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/compostabePackaging.png"
 import blankLabel from "../assets/images/blackLabel.png"
-// import originGreen from "../assets/images/originGreenLogo.png"
 
 class CompostablePackagingPage extends React.Component {
   render() {
+    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+
     return (
       <Layout>
         <SEO title="Home" />
         <Banner
-          img={banner}
+          img={img}
           // imgtwo={originGreen}
           title="New Home Compostable Packaging"
           subtitle="Quality and the Environment"
@@ -122,3 +124,19 @@ class CompostablePackagingPage extends React.Component {
 }
 
 export default CompostablePackagingPage
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "compostabePackaging.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

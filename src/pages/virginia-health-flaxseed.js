@@ -1,15 +1,16 @@
 import React from "react"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import { Container, Row } from "react-bootstrap"
 
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
-import { Container, Row } from "react-bootstrap"
 import WorkWith from "../components/WorkWith"
 import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
 
-import banner from "../assets/images/virginiaBanner.png"
 import RowThreeCards from "../components/RowThreeCards"
 
 import nutty from "../assets/images/nutty.png"
@@ -44,11 +45,11 @@ const data = [
 ]
 
 const VirginiaHealthPage = () => {
-  console.log(banner)
+  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
   return (
     <Layout>
       <SEO title="Our Brands" />
-      <Banner img={banner} title="Health Food With a Difference" />
+      <Banner img={img} title="Health Food With a Difference" />
       <Container className="text-center my-5">
         <Row>
           <div className="col-sm-4">
@@ -151,3 +152,19 @@ const VirginiaHealthPage = () => {
   )
 }
 export default VirginiaHealthPage
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "virginiaBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

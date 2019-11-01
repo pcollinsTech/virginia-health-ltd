@@ -3,14 +3,16 @@ import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
-import banner from "../assets/images/bannerOne.png"
 class TermsAndConditions extends React.Component {
   render() {
+    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner img={banner} title="TERMS AND CONDITIONS OF USE" />
+        <Banner img={img} title="TERMS AND CONDITIONS OF USE" />
         <Container className="text-center my-5">
           <Row>
             <p className="home_text">
@@ -83,3 +85,19 @@ class TermsAndConditions extends React.Component {
 }
 
 export default TermsAndConditions
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "bannerOne.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

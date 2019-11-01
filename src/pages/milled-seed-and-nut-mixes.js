@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
@@ -22,8 +23,6 @@ import pillowPack from "../assets/images/packaging/pillowPack.png"
 import bagInBox from "../assets/images/packaging/bagInBox.png"
 import shelfReadyDisplay from "../assets/images/packaging/shelfReadyDisplay.png"
 import can from "../assets/images/packaging/can.png"
-
-import banner from "../assets/images/mixSeedsBanner.png"
 
 const ingredientsData = [
   {
@@ -78,10 +77,12 @@ const packagingData = [
 ]
 
 const MixSeedsForm = () => {
+  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
+
   return (
     <Layout>
       <SEO title="Our Brands" />
-      <Banner img={banner} title="Milled Seed and Nut Mixes" />
+      <Banner img={img} title="Milled Seed and Nut Mixes" />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
         <UniqueSellingPoints fish={true} />
@@ -123,3 +124,19 @@ const MixSeedsForm = () => {
 }
 
 export default MixSeedsForm
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "mixSeedsBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

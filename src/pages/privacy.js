@@ -3,14 +3,15 @@ import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
-
-import banner from "../assets/images/bannerOne.png"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
 class PrivacyPage extends React.Component {
   render() {
+    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner img={banner} title="Privacy Statement" />
+        <Banner img={img} title="Privacy Statement" />
         <Container className="text-center my-5">
           <Row>
             <p className="home_text">
@@ -282,3 +283,19 @@ class PrivacyPage extends React.Component {
 }
 
 export default PrivacyPage
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "bannerOne.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

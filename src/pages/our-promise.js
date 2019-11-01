@@ -5,17 +5,17 @@ import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
 import HomeCompostablePackaging from "../components/HomeCompostablePackaging"
 import ContactUs from "../components/ContactUs"
-
-import banner from "../assets/images/ourPromiseBanner.png"
-// import originGreen from "../assets/images/originGreenLogo.png"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
 class OurPromisePage extends React.Component {
   render() {
+    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
     return (
       <Layout>
         <SEO title="Home" />
         <Banner
-          img={banner}
+          img={img}
           title="Our Promise to you"
           subtitle="Quality and the Environment"
         />
@@ -115,3 +115,19 @@ class OurPromisePage extends React.Component {
 }
 
 export default OurPromisePage
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "ourPromiseBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

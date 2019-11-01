@@ -4,15 +4,16 @@ import Banner from "../components/Banner"
 import SEO from "../components/seo"
 import FeaturedBlog from "../components/FeaturedBlog"
 import BlogCard from "../components/InTheNews/BlogCard"
-import banner from "../assets/images/BlogBanner.png"
 import { graphql } from "gatsby"
 import { Row, Container } from "react-bootstrap"
+import Img from "gatsby-image"
 class Blog extends React.Component {
   render() {
+    const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner title="In The News" img={banner} />
+        <Banner title="In The News" img={img} />
         <Container>
           <Row>
             <div id="main">
@@ -32,7 +33,7 @@ class Blog extends React.Component {
                 <div className="container">
                   <div className="row blog__container">
                     {this.props.data.allWordpressPost.edges.map(post => {
-                      return <BlogCard post={post} />
+                      return <BlogCard post={post} key={post.id} />
                     })}
                   </div>
                 </div>
@@ -52,6 +53,7 @@ export const pageQuery = graphql`
     allWordpressPost {
       edges {
         node {
+          id
           date(formatString: "DD / MMMM / YYYY")
           slug
           title
@@ -60,6 +62,17 @@ export const pageQuery = graphql`
           featured_media {
             source_url
           }
+        }
+      }
+    }
+    file(relativePath: { eq: "BlogBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
         }
       }
     }

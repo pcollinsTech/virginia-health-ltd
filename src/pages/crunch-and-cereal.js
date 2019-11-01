@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
 import Banner from "../components/Banner"
@@ -23,8 +24,6 @@ import pillowPack from "../assets/images/packaging/pillowPack.png"
 import bagInBox from "../assets/images/packaging/bagInBox.png"
 import shelfReadyDisplay from "../assets/images/packaging/shelfReadyDisplay.png"
 import can from "../assets/images/packaging/can.png"
-
-import banner from "../assets/images/crunchCerealsBanner.png"
 
 const ingredientsData = [
   {
@@ -89,10 +88,11 @@ const packagingData = [
 ]
 
 const CrunchAndCerealForm = () => {
+  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
   return (
     <Layout>
       <SEO title="Crunch and Cereals" />
-      <Banner img={banner} title="Crunch and Cereals" />
+      <Banner img={img} title="Crunch and Cereals" />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
         <UniqueSellingPoints fish={false} />
@@ -134,3 +134,19 @@ const CrunchAndCerealForm = () => {
 }
 
 export default CrunchAndCerealForm
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "crunchCerealsBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

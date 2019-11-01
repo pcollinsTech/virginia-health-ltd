@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react"
-import { Link } from "gatsby"
-import { FaCheckCircle } from "react-icons/fa"
+import Img from "gatsby-image"
+import { Link, graphql } from "gatsby"
 import { Container, Row } from "react-bootstrap"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
@@ -30,7 +30,6 @@ import discs from "../assets/images/shapes/cube.png"
 
 import EnquiryContext from "../context/enquiry/enquiryContext"
 import { containsObject, tick } from "../helpers/helpers"
-import banner from "../assets/images/snacksBanner.png"
 
 const ingredientsData = [
   {
@@ -113,10 +112,11 @@ const SnacksForm = () => {
       ? removeTexture(texture)
       : addTexture(texture)
   }
+  const img = <Img fixed={this.props.data.file.childImageSharp.fixed.src} />
   return (
     <Layout>
       <SEO title="Snacks" />
-      <Banner img={banner} title="Snacks of all Shapes and Sizes" />
+      <Banner img={img} title="Snacks of all Shapes and Sizes" />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
         <UniqueSellingPoints fish={false} />
@@ -193,3 +193,19 @@ const SnacksForm = () => {
 }
 
 export default SnacksForm
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "snacksBanner.png" }) {
+      childImageSharp {
+        fixed(width: 1048, height: 393) {
+          base64
+          width
+          height
+          src
+          srcSet
+        }
+      }
+    }
+  }
+`

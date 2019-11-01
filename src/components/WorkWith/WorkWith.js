@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import ocado from "../../assets/images/client-logos/ocado.png"
 import sainsburys from "../../assets/images/client-logos/sainsburys.png"
 import asda from "../../assets/images/client-logos/asda.png"
