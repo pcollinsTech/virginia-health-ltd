@@ -55,7 +55,7 @@ export default Blog
 
 export const pageQuery = graphql`
   query {
-    allWordpressPost {
+    allWordpressPost(limit: 3) {
       edges {
         node {
           id
