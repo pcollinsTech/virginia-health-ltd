@@ -91,7 +91,7 @@ const textureData = [
 ]
 
 const shapeData = [{ title: "Crunchy" }, { title: "Chewy" }, { title: "Soft" }]
-const SnacksForm = () => {
+const SnacksForm = ({ data }) => {
   const enquiryContext = useContext(EnquiryContext)
 
   const {
@@ -112,7 +112,7 @@ const SnacksForm = () => {
       ? removeTexture(texture)
       : addTexture(texture)
   }
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Snacks" />

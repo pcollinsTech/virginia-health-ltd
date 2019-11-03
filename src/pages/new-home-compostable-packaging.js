@@ -19,7 +19,6 @@ class CompostablePackagingPage extends React.Component {
         <SEO title="Home" />
         <Banner
           img={img}
-          // imgtwo={originGreen}
           title="New Home Compostable Packaging"
           subtitle="Quality and the Environment"
         />

@@ -76,8 +76,8 @@ const packagingData = [
   },
 ]
 
-const MixSeedsForm = () => {
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+const MixSeedsForm = ({ data }) => {
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
 
   return (
     <Layout>

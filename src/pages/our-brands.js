@@ -11,8 +11,8 @@ import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
-const OurBrandsPage = props => {
-  const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+const OurBrandsPage = ({ data }) => {
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
 
   return (
     <Layout>
@@ -46,7 +46,7 @@ const OurBrandsPage = props => {
         <WorkWith />
       </div>
       <div id="InTheNews">
-        <InTheNews posts={props.data.allWordpressPost.edges} />
+        <InTheNews posts={data.allWordpressPost.edges} />
       </div>
       <div id="contactUs">
         <ContactUs />

@@ -17,7 +17,7 @@ import nutty from "../assets/images/nutty.png"
 import raspberryHemp from "../assets/images/raspberryHemp.png"
 import turmericOrange from "../assets/images/turmericOrange.png"
 
-const data = [
+const productData = [
   {
     img: nutty,
     para:
@@ -96,7 +96,7 @@ const VirginiaHealthPage = ({ data }) => {
         </Row>
       </Container>
       <Container>
-        <RowThreeCards data={data} />
+        <RowThreeCards data={productData} />
       </Container>
       <Container>
         <h2 className="text-center">
