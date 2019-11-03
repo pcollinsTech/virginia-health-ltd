@@ -8,19 +8,19 @@ const BannerCarousel = ({ titleOne, titleTwo, titleThree, img }) => {
     <div>
       <Carousel interval="6000">
         <Carousel.Item>
-          <Img fluid={img} />
+          <Img loading="lazy" fluid={img} />
           <Carousel.Caption>
             <h2>{titleOne}</h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <Img fluid={img} />
+          <Img loading="lazy" fluid={img} />
           <Carousel.Caption>
             <h2>{titleTwo}</h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <Img fluid={img} />
+          <Img loading="lazy" fluid={img} />
           <Carousel.Caption>
             <h2>{titleThree}</h2>
           </Carousel.Caption>

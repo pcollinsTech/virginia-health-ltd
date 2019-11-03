@@ -8,7 +8,7 @@ import { Container, Row } from "react-bootstrap"
 
 class TermsAndConditions extends React.Component {
   render() {
-    const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+    const img = <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
     return (
       <Layout>
         <SEO title="Home" />

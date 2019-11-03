@@ -112,7 +112,7 @@ const SnacksForm = ({ data }) => {
       ? removeTexture(texture)
       : addTexture(texture)
   }
-  const img = <Img fluid={data.file.childImageSharp.fluid} />
+  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Snacks" />

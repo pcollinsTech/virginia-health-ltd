@@ -88,7 +88,7 @@ const packagingData = [
 ]
 
 const CrunchAndCerealForm = ({ data }) => {
-  const img = <Img fluid={data.file.childImageSharp.fluid} />
+  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Crunch and Cereals" />

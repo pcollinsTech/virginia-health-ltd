@@ -12,7 +12,7 @@ import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
 const OurBrandsPage = ({ data }) => {
-  const img = <Img fluid={data.file.childImageSharp.fluid} />
+  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
 
   return (
     <Layout>

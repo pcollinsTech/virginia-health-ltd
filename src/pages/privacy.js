@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 class PrivacyPage extends React.Component {
   render() {
-    const img = <Img fluid={this.props.data.file.childImageSharp.fluid} />
+    const img = <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
     return (
       <Layout>
         <SEO title="Home" />

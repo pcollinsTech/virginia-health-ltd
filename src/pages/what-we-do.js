@@ -14,7 +14,7 @@ import manufacture from "../assets/images/manufacture.jpeg"
 import productDevelopment from "../assets/images/productDevelopment.jpeg"
 
 const WhatWeDoPage = ({ data }) => {
-  const img = <Img fluid={data.file.childImageSharp.fluid} />
+  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="What We Do" />
