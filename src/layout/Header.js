@@ -1,11 +1,25 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap"
+import { Navbar, Nav, NavDropdown, Button, Modal } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import SideNav from "./SideNav"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 
 class Header extends Component {
+  constructor(props, context) {
+    super(props, context)
+
+    this.handleShow = this.handleShow.bind(this)
+
+    this.state = {
+      show: false,
+    }
+  }
+
+  handleShow(i) {
+    this.setState({ show: i })
+  }
+
   render() {
     return (
       <div className="nav-wrapper">
@@ -117,9 +131,37 @@ class Header extends Component {
               </div>
               <div className="mobile_view_nav mt-2">
                 <Nav.Item>
-                  <Button variant="primary">
-                    <a href="tel:+(44) 121 288 3363">Call Now</a>
+                  <Button
+                    variant="primary"
+                    onClick={() => this.handleShow(true)}
+                  >
+                    Call Now
                   </Button>
+
+                  <Modal
+                    show={this.state.show}
+                    onHide={() => this.handleShow(false)}
+                    dialogClassName="modal-90w"
+                    aria-labelledby="example-custom-modal-styling-title"
+                  >
+                    <Modal.Header closeButton>
+                      <Modal.Title id="example-custom-modal-styling-title">
+                        Call
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Button variant="primary" className="mb-2">
+                        <a href={`tel:+(44) 121 288 3363`}>
+                          UK +(44) 121 288 3363
+                        </a>
+                      </Button>
+                      <Button variant="primary">
+                        <a href={`tel: +(353) 21 477 0033`}>
+                          Ireland +(353) 21 477 0033
+                        </a>
+                      </Button>
+                    </Modal.Body>
+                  </Modal>
                 </Nav.Item>
                 <div className="social_nav text-right">
                   <FaFacebookF />
