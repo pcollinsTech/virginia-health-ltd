@@ -5,15 +5,16 @@ import { Link } from "gatsby"
 const Card = ({ data }) => {
   const { img, para, buttonTitle, buttonLink, title } = data
 
-  const link = buttonLink.startsWith("http") ? (
-    <a href={buttonLink} target="__blank">
-      <button className="btn btn-primary">{buttonTitle}</button>
-    </a>
-  ) : (
-    <Link to={buttonLink}>
-      <button className="btn btn-primary">{buttonTitle}</button>
-    </Link>
-  )
+  const link =
+    buttonLink && buttonLink.startsWith("http") ? (
+      <a href={buttonLink} target="__blank">
+        <button className="btn btn-primary">{buttonTitle}</button>
+      </a>
+    ) : (
+      <Link to={buttonLink}>
+        <button className="btn btn-primary">{buttonTitle}</button>
+      </Link>
+    )
 
   const button = buttonTitle ? link : ""
 
