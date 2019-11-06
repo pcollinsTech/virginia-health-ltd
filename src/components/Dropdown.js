@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react"
-
+import { Link } from "gatsby"
 const Dropdown = ({ title, list }) => {
   const [listOpen, setListOpen] = useState(false)
 
@@ -10,10 +10,10 @@ const Dropdown = ({ title, list }) => {
           <div className="nav-link">{title}</div>
         </div>
         {listOpen && (
-          <div className="dropdown-menu">
+          <div className="dd-menu">
             {list.map(item => (
-              <div className="dropdown-item" key={item.id}>
-                {item.title}
+              <div className="dd-item" key={item.id}>
+                <Link to={item.link}>{item.title}</Link>
               </div>
             ))}
           </div>

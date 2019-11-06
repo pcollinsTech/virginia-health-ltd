@@ -1,7 +1,7 @@
 import React from "react"
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaFacebookF, FaInstagram } from "react-icons/fa"
 import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Container, Row } from "react-bootstrap"
 
 import Layout from "../layout/Layout"
@@ -22,24 +22,18 @@ const productData = [
     img: nutty,
     para:
       "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
-    buttonTitle: "Buy Now",
-    buttonLink: "#",
     title: "Original Nutty Flavour",
   },
   {
     img: raspberryHemp,
     para:
       "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
-    buttonTitle: "Buy Now",
-    buttonLink: "#",
     title: "Raspberry & Hemp - Coming Soon",
   },
   {
     img: turmericOrange,
     para:
       "Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
-    buttonTitle: "Buy Now",
-    buttonLink: "#",
     title: "Turmeric & Orange - Coming Soon",
   },
 ]
@@ -48,21 +42,24 @@ const VirginiaHealthPage = ({ data }) => {
   const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
-      <SEO title="Our Brands" />
+      <SEO title="Virginia Harvest" />
       <Banner img={img} title="Health Food With a Difference" />
       <Container className="text-center my-5">
         <Row>
           <div className="col-sm-4">
-            <h2 className="green">Virginia Health Flaxseed</h2>
+            <h2 className="green">Virginia Harvest </h2>
           </div>
           <div className="col-sm-8">
             <hr style={{ borderBottom: " solid 1px #aec237" }} />
             <div className="row d-flex text-right green justify-content-between">
               <h5 className="col-sm-4">Follow Virginia Health Flaxseed</h5>
               <div className="col-sm-2 d-flex text-right green justify-content-around brand_social_links">
-                <FaInstagram />
-                <FaTwitter />
-                <FaFacebookF />
+                <Link to="https://www.facebook.com/virginiahealthfood/">
+                  <FaInstagram />
+                </Link>
+                <Link to="https://www.instagram.com/virginiaflaxseed/">
+                  <FaFacebookF />
+                </Link>
               </div>
             </div>
           </div>
