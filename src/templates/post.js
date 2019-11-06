@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
     <React.Fragment>
       <section id="blog_banner" className="blog_major">
         <img src={featured_image} alt={title} style={{ width: "100%" }} />
-        <div className="inner">
+        <div className="inner text-center my-4">
           <header>
             <h1
               className="title is-size-2 has-text-weight-bold is-bold-light blog_title"

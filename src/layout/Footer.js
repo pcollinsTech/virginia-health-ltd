@@ -18,14 +18,14 @@ const Footer = () => (
             <Link to="/terms-and-conditions">Terms and Contitions</Link>
           </p>
           <p>
-            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/privacy">Privacy Policy</Link>
           </p>
           <p>
-            <Link to="/cooklies-policy">Cookies Policy</Link>
+            <Link to="/cookies">Cookies Policy</Link>
           </p>
-          <p>
+          {/* <p>
             <Link to="/stockists">Stockists</Link>
-          </p>
+          </p> */}
 
           <div className="mt-4 partners">
             <img src={brc} alt="" />
@@ -51,7 +51,7 @@ const Footer = () => (
             In accordance with our GDPR obligations we seek your consent to
             receive our (funny, clever, witty) newsletters. You may withdraw
             your consent at any time in the future. You can view our privacy
-            policy <Link to="/privacy-policy"> here.</Link>
+            policy <Link to="/privacy"> here.</Link>
           </p>
           <ul className="copyright text-center mt-5 remove_mobile">
             <li>&copy; Virginia Health Foods Ltd 2019</li>
