@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
-import BannerCarousel from "../components/BannerCarousel"
+import Banner from "../components/Banner"
 import { Container, Row } from "react-bootstrap"
 import OurBrands from "../components/OurBrands"
 import WorkWith from "../components/WorkWith"
@@ -12,19 +12,12 @@ import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
 const OurBrandsPage = ({ data }) => {
-  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
 
   return (
     <Layout>
       <SEO title="Our Brands" />
-      <BannerCarousel
-        imgOne={img}
-        imgTwo={img}
-        imgThree={img}
-        titleOne="Our Brands"
-        titleTwo="Our Brands"
-        titleThree="Our Brands"
-      />
+      <Banner img={img} title="Our Brands" />
       <Container className="text-center my-5">
         <Row>
           <p className="home_text">
@@ -73,10 +66,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "BannerOurBrands.png" }) {
+    file(relativePath: { eq: "bannerOurBrands.png" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid
         }
       }
     }

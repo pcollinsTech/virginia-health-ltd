@@ -16,7 +16,7 @@ import RowThreeCards from "../components/RowThreeCards"
 import nutty from "../assets/images/nutty.png"
 import raspberryHemp from "../assets/images/raspberryHemp.png"
 import turmericOrange from "../assets/images/turmericOrange.png"
-
+import ocadoReview from "../assets/images/ocadoQuote.png"
 const productData = [
   {
     img: nutty,
@@ -47,7 +47,7 @@ const VirginiaHealthPage = ({ data }) => {
       <Container className="text-center my-5">
         <Row>
           <div className="col-sm-4">
-            <h2 className="green">Virginia Harvest </h2>
+            <h2 className="green">Virginia Harvest</h2>
           </div>
           <div className="col-sm-8">
             <hr style={{ borderBottom: " solid 1px #aec237" }} />
@@ -136,6 +136,15 @@ const VirginiaHealthPage = ({ data }) => {
           </div>
         </Row>
       </Container>
+      <Container>
+        <Row className="py-5">
+          <div className="col-md-4">
+            <img src={ocadoReview} alt="" />
+          </div>
+          <div className="col-md-4"></div>
+          <div className="col-md-4"></div>
+        </Row>
+      </Container>
       <div id="qualityAndSustainability">
         <HomeCompostablePackaging />
       </div>
@@ -155,7 +164,7 @@ export const pageQuery = graphql`
     file(relativePath: { eq: "virginiaBanner.png" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid
         }
       }
     }

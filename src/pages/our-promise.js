@@ -121,7 +121,7 @@ export const pageQuery = graphql`
     file(relativePath: { eq: "ourPromiseBanner.png" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid
         }
       }
     }

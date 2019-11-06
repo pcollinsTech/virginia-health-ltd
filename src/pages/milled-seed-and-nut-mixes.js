@@ -130,7 +130,7 @@ export const pageQuery = graphql`
     file(relativePath: { eq: "mixSeedsBanner.png" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -5,19 +5,18 @@ import { Link } from "gatsby"
 const Card = ({ data }) => {
   const { img, para, buttonTitle, buttonLink, title } = data
 
-  const button = buttonTitle ? (
-    <button className="btn btn-primary">
-      {buttonLink.startsWith("http") ? (
-        <a href={buttonLink} target="__blank">
-          {buttonTitle}
-        </a>
-      ) : (
-        <Link to={`${buttonLink}`}>{buttonTitle}</Link>
-      )}
-    </button>
+  const link = buttonLink.startsWith("http") ? (
+    <a href={buttonLink} target="__blank">
+      <button className="btn btn-primary">{buttonTitle}</button>
+    </a>
   ) : (
-    ""
+    <Link to={buttonLink}>
+      <button className="btn btn-primary">{buttonTitle}</button>
+    </Link>
   )
+
+  const button = buttonTitle ? link : ""
+
   return (
     <div className="col-sm-4 px-3 brand_item">
       <img src={img} alt="" />
