@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { Navbar, Nav, NavDropdown, Button, Modal } from "react-bootstrap"
+import { Navbar, Nav, Button, Modal } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import SideNav from "./SideNav"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
@@ -59,6 +59,7 @@ class Header extends Component {
               </Nav.Item>
               <DropdownBrand
                 title="Our Brands"
+                mainLink="/our-brands"
                 list={[
                   {
                     id: "virginiaHealthLink",

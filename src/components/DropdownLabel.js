@@ -1,8 +1,6 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 const DropdownLabel = ({ title, list, mainLink }) => {
-  const [listOpen, setListOpen] = useState(false)
-
   const link = (link, title) =>
     link.startsWith("http") ? (
       <a href={link} target="__blank">
@@ -14,7 +12,7 @@ const DropdownLabel = ({ title, list, mainLink }) => {
   return (
     <Fragment>
       <div className="dd-wrapper-label">
-        <div className="dd-header-label" onClick={() => setListOpen(!listOpen)}>
+        <div className="dd-header-label">
           <div className="nav-link">
             <Link to={mainLink}>{title}</Link>
           </div>

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 const DropdownBrand = ({ title, list, mainLink }) => {
   const link = (link, title) =>
