@@ -4,6 +4,8 @@ import { Navbar, Nav, NavDropdown, Button, Modal } from "react-bootstrap"
 import logo from "../assets/images/logo.svg"
 import SideNav from "./SideNav"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
+import DropdownBrand from "../components/DropdownBrand"
+import DropdownLabel from "../components/DropdownLabel"
 
 class Header extends Component {
   constructor(props, context) {
@@ -55,51 +57,47 @@ class Header extends Component {
                   What We Do
                 </Link>
               </Nav.Item>
-
-              <NavDropdown title="Our Brands">
-                <NavDropdown.Item>
-                  <Link to="/our-brands">Our Brands</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/virginia-health-flaxseed">Virginia Health</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <a href="https://squbes.ie" target="__blank">
-                    Squbes
-                  </a>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <a href=" https://www.foodbyhelen.com/" target="__blank">
-                    Helen's
-                  </a>
-                </NavDropdown.Item>
-              </NavDropdown>
-
-              <NavDropdown title="Private Label">
-                <NavDropdown.Item>
-                  <Link to="/private-label" onClick={this.closeNavbar}>
-                    Private Label
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/crunch-and-cereal" onClick={this.closeNavbar}>
-                    Crunch &amp; Cereal
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/snacks" onClick={this.closeNavbar}>
-                    Snacks
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link
-                    to="milled-seed-and-nut-mixes"
-                    onClick={this.closeNavbar}
-                  >
-                    Milled Seed & Nut Mixes
-                  </Link>
-                </NavDropdown.Item>
-              </NavDropdown>
+              <DropdownBrand
+                title="Our Brands"
+                list={[
+                  {
+                    id: "virginiaHealthLink",
+                    link: "/virginia-health-flaxseed",
+                    title: "Virginia Health",
+                  },
+                  {
+                    id: "squbesLink",
+                    link: "https://squbes.ie",
+                    title: "Squbes",
+                  },
+                  {
+                    id: "helensLink",
+                    link: "https://www.foodbyhelen.com/",
+                    title: "Helen's",
+                  },
+                ]}
+              />
+              <DropdownLabel
+                title="Private Label"
+                mainLink="/private-label"
+                list={[
+                  {
+                    id: "crunchLink",
+                    link: "/crunch-and-cereal",
+                    title: "Crunch & Cereal",
+                  },
+                  {
+                    id: "snacksLink",
+                    link: "/snacks",
+                    title: "Snacks",
+                  },
+                  {
+                    id: "milledSeedLink",
+                    link: "/milled-seed-and-nut-mixes",
+                    title: "Milled Seed & Nut Mixes",
+                  },
+                ]}
+              />
 
               <Nav.Item>
                 <Link

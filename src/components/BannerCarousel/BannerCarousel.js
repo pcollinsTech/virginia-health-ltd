@@ -3,7 +3,6 @@ import { Carousel } from "react-bootstrap"
 import Img from "gatsby-image"
 
 const BannerCarousel = ({ titleOne, titleTwo, titleThree, img }) => {
-  console.log("BANNER", img)
   return (
     <div>
       <Carousel interval="6000">
