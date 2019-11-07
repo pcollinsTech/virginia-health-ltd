@@ -34,8 +34,8 @@ module.exports = {
           "**/reindex_posts",
           "**/ryte",
           "**/statistics",
-          "***/users",
-          "***/options",
+          "**/users",
+          "**/options",
           "**/key",
         ],
         // use a custom normalizer which is applied after the built-in ones.

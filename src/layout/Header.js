@@ -123,7 +123,7 @@ class Header extends Component {
               </Nav.Item>
               <Nav.Item>
                 <Button variant="primary">
-                  <Link to="/enquire">Enquire Now</Link>
+                  <Link to="#contactUs">Enquire Now</Link>
                 </Button>
               </Nav.Item>
               <div className="remove_mobile">

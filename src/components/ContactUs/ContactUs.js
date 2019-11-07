@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const ContactUs = () => {
   return (
-    <Container className="py-5">
+    <Container className="py-5" id="contactUs">
       <h2>Contact Us</h2>
       <Row className="d-flex justify-content-between">
         <div className="col-sm-7 pr-4">
