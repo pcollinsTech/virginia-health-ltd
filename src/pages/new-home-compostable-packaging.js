@@ -48,7 +48,6 @@ class CompostablePackagingPage extends React.Component {
             <div className="col-sm-6">
               <img src={blankLabel} alt="" />
             </div>
-
             <div className="col-sm-6">
               <h2 className="py-3">Subtitle here</h2>
               <p className="">

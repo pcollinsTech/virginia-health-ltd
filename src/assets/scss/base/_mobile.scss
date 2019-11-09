@@ -1,4 +1,7 @@
 @include breakpoint(small) {
+  .mobile_up img {
+    padding-bottom: 25px;
+  }
   .mobile_up :nth-child(1) {
     order: 4;
   }
