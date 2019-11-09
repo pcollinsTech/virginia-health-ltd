@@ -1,0 +1,8 @@
+@include breakpoint(small) {
+  .mobile_up :nth-child(1) {
+    order: 4;
+  }
+  .mobile_up :nth-child(2) {
+    order: 1;
+  }
+}

@@ -12,7 +12,6 @@ import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
 const OurBrandsPage = ({ data }) => {
-  console.log("OUR BRANDS DATA", data)
   const img = <Img fluid={data.file.childImageSharp.fluid} />
 
   return (

@@ -6,7 +6,7 @@ const HomeCompostablePackaging = () => {
   return (
     <Container>
       <Row className="d-flex justify-content-between">
-        <div className="col-sm-6 pt-2">
+        <div className="col-sm-5 pt-2">
           <h2 style={{ color: "white" }}>
             Home <span className="green">Compostable</span> Packaging
           </h2>
@@ -23,7 +23,7 @@ const HomeCompostablePackaging = () => {
           </p>
           <p>Thank you for choosing the option that leaves no trace.</p>
         </div>
-        <div className="col-sm-6">
+        <div className="col-sm-7">
           <img src={homeCompostablePackaging} alt="" />
         </div>
       </Row>

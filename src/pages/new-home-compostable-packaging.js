@@ -12,7 +12,9 @@ import blankLabel from "../assets/images/blackLabel.png"
 
 class CompostablePackagingPage extends React.Component {
   render() {
-    const img = <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
+    const img = (
+      <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
+    )
 
     return (
       <Layout>
@@ -60,7 +62,6 @@ class CompostablePackagingPage extends React.Component {
           </Row>
         </Container>
         <div id="qualityAndSustainability">
-          ww
           <HomeCompostablePackaging />
         </div>
         <Container>

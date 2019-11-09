@@ -46,8 +46,8 @@ const WhatWeDoPage = ({ data }) => {
             </p>
           </div>
         </Row>
-        <Row className="mb-5">
-          <div className="col-sm-6">
+        <Row className="mb-5 mobile_up">
+          <div className="col-sm-6 col-md-pull-6">
             <h3>Quality</h3>
             <p>
               Superior product quality is built into our development and
@@ -61,7 +61,7 @@ const WhatWeDoPage = ({ data }) => {
               production against documented specifications.
             </p>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-6 col-md-push-6">
             <img src={quality} alt="Quality" />
           </div>
         </Row>

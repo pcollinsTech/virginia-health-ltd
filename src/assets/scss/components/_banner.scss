@@ -20,7 +20,8 @@
 @include breakpoint(small) {
   .banner_image {
     h2 {
-      font-size: 37px;
+      font-size: 37px !important;
+      line-height: 1.45 !important;
     }
   }
 }
@@ -28,15 +29,20 @@
 @include breakpoint(xsmall) {
   .banner_image {
     h2 {
-      font-size: 27px;
+      font-size: 27px !important;
+      line-height: 1.35 !important;
     }
   }
 }
 
 @include breakpoint(xxsmall) {
+  .carousel-caption {
+    bottom: 29% !important;
+  }
   .banner_image {
     h2 {
-      font-size: 22px;
+      font-size: 22px !important;
+      line-height: 1.25 !important;
     }
   }
 }
