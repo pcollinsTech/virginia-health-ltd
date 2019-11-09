@@ -44,16 +44,16 @@ const VirginiaHealthPage = ({ data }) => {
     <Layout>
       <SEO title="Virginia Harvest" />
       <Banner img={img} title="Health Food With a Difference" />
-      <Container className="text-center my-5">
+      <Container className="text-center my-5 virginia_harvest">
         <Row>
           <div className="col-sm-4">
             <h2 className="green">Virginia Harvest</h2>
           </div>
           <div className="col-sm-8">
             <hr style={{ borderBottom: " solid 1px #aec237" }} />
-            <div className="row d-flex text-right green justify-content-between">
-              <h5 className="col-sm-4">Follow Virginia Health Flaxseed</h5>
-              <div className="col-sm-2 d-flex text-right green justify-content-around brand_social_links">
+            <div className="row d-flex text-right green justify-content-around">
+              <h5 className="col-xs-2">Follow Virginia Health Flaxseed</h5>
+              <div className="col-xs-2 d-flex text-right green justify-content-around brand_social_links">
                 <Link to="https://www.facebook.com/virginiahealthfood/">
                   <FaInstagram />
                 </Link>
