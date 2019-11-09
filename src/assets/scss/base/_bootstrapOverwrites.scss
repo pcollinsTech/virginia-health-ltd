@@ -54,7 +54,15 @@
   padding-left: 15px;
   width: 50%;
 }
-
+.row {
+  p,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: 0 20px;
+  }
+}
 .col-xs-5ths {
   width: 20%;
   float: left;
