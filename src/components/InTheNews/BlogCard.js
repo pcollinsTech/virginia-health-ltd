@@ -19,7 +19,7 @@ const BlogCard = ({ post }) => {
           style={{ color: "black" }}
         />
         <span>{date}</span>
-        <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
       </Link>
     </div>
   )
