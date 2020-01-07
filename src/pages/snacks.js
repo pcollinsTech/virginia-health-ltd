@@ -126,7 +126,7 @@ const SnacksForm = ({ data }) => {
             {textureData.map(texture => {
               return (
                 <div
-                  className="col-sm-3 ingredient"
+                  className="col-xs-3 ingredient"
                   onClick={e => handleTextureSelect(texture)}
                 >
                   <img src={texture.img} alt="" />
@@ -143,7 +143,7 @@ const SnacksForm = ({ data }) => {
             {shapeData.map(shape => {
               return (
                 <div
-                  className="col-sm-3 ingredient"
+                  className="col-xs-3 ingredient"
                   onClick={e => handleShapeSelect(shape)}
                 >
                   <div className="blue_square">

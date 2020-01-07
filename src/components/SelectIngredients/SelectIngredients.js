@@ -23,7 +23,7 @@ const SelectIngredients = ({ data }) => {
         {data.map(ingredient => {
           return (
             <div
-              className="col-sm-3 ingredient"
+              className="col-xs-3 ingredient"
               onClick={e => handleSelect(ingredient)}
             >
               <img src={ingredient.img} alt={ingredient.title} />

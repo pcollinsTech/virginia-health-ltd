@@ -24,7 +24,7 @@ const SelectPackaging = ({ data }) => {
         {data.map(packaging => {
           return (
             <div
-              className="col-sm-3 packaging"
+              className="col-xs-3 packaging"
               onClick={e => handleSelect(packaging)}
             >
               <img src={packaging.img} alt={packaging.title} />

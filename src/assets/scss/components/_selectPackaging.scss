@@ -1,6 +1,7 @@
 .packaging {
   display: relative;
   display: inline-block;
+  padding: 0 20px;
   img {
     display: block;
     max-width: 100%;
@@ -15,5 +16,11 @@
     border: 50%;
     color: white;
     font-size: 25px;
+  }
+}
+
+@include breakpoint(small) {
+  .packaging {
+    width: 50%;
   }
 }

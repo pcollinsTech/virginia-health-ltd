@@ -1,6 +1,7 @@
 .ingredient {
   display: relative;
   display: inline-block;
+  padding: 0px 20px;
   img {
     display: block;
     max-width: 100%;
@@ -27,4 +28,10 @@
 
 .checked {
   display: block !important;
+}
+
+@include breakpoint(small) {
+  .ingredient {
+    width: 50%;
+  }
 }

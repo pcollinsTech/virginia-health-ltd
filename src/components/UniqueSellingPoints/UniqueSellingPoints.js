@@ -32,7 +32,7 @@ const UniqueSellingPoints = ({ fish }) => {
   }
   const fishBox =
     fish === true ? (
-      <div className="col-sm-3 ingredient">
+      <div className="col-xs-3 ingredient">
         <div className="selling_point">
           <div className="white_circle">
             <img src={omega3} alt="Omega 3" />
@@ -49,7 +49,7 @@ const UniqueSellingPoints = ({ fish }) => {
         {data.map(usp => {
           return (
             <div
-              className="col-sm-3 ingredient"
+              className="col-xs-3 ingredient"
               onClick={e => handleSelect(usp)}
             >
               <div className="selling_point">
