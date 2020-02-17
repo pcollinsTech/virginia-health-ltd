@@ -12,11 +12,16 @@ import InTheNews from "../components/InTheNews"
 
 class HomeIndex extends React.Component {
   render() {
+    var images = {
+      img1: this.props.data.img1.childImageSharp.fluid,
+      img2: this.props.data.img2.childImageSharp.fluid,
+      img3: this.props.data.img3.childImageSharp.fluid,
+    }
     return (
       <Layout>
         <SEO title="Home" />
         <BannerCarousel
-          img={this.props.data.file.childImageSharp.fluid}
+          images={images}
           titleOne="Health Food With a Difference"
           titleTwo="Health Food With a Difference"
           titleThree="Health Food With a Difference"
@@ -70,7 +75,21 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "bannerOne.png" }) {
+    img1: file(relativePath: { eq: "bannerOne.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img2: file(relativePath: { eq: "bannerTwo.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img3: file(relativePath: { eq: "bannerThree.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
