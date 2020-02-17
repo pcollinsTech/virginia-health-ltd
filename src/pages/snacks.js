@@ -26,7 +26,7 @@ import shelfReadyDisplay from "../assets/images/packaging/shelfReadyDisplay.png"
 
 import balls from "../assets/images/shapes/ball.png"
 import bites from "../assets/images/shapes/cube.png"
-import discs from "../assets/images/shapes/cube.png"
+import discs from "../assets/images/shapes/discs.png"
 
 import EnquiryContext from "../context/enquiry/enquiryContext"
 import { containsObject, tick } from "../helpers/helpers"
