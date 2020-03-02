@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/Layout"
 import SEO from "../components/seo"
@@ -10,51 +10,101 @@ import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
 
-class HomeIndex extends React.Component {
-  render() {
-    var images = {
-      img1: this.props.data.img1.childImageSharp.fluid,
-      img2: this.props.data.img2.childImageSharp.fluid,
-      img3: this.props.data.img3.childImageSharp.fluid,
-    }
-    return (
-      <Layout>
-        <SEO title="Home" />
-        <BannerCarousel
-          images={images}
-          titleOne="Health Food With a Difference"
-          titleTwo="Health Food With a Difference"
-          titleThree="Health Food With a Difference"
-        />
-        <Container className="text-center my-5">
-          <Row>
-            <p className="home_text">
-              Our Products include highly nutritious, milled and crunchy seed
-              toppings, delicious wholesome innovative snacks, low sugar cereals
-              and gluten free baking mixes. We weave the valuable properties of
-              seeds and cereals such as flaxseed, sunflower seed, pumpkinseed
-              and chia, oats, quinoa and amaranth into delicious products using
-              technical excellence and a dash of ingenuity to produce products
-              that delight our customers.
-            </p>
-          </Row>
-        </Container>
-        <OurBrands />
-        <div id="qualityAndSustainability">
-          <QualityAndSustainability />
-        </div>
-        <div id="WorkWith">
-          <WorkWith />
-        </div>
-        <div id="InTheNews">
-          <InTheNews posts={this.props.data.allWordpressPost.edges} />
-        </div>
-        <div id="contactUs">
-          <ContactUs />
-        </div>
-      </Layout>
-    )
+import seeds from "../assets/images/seeds.png"
+import bowlCereal from "../assets/images/bowlCereal.png"
+import biscuit from "../assets/images/biscuit.png"
+import RowThreeCards from "../components/RowThreeCards"
+
+const formData = [
+  {
+    img: seeds,
+    para:
+      "Bespoke New Product Development of nutritious snacks and mixes to offer innovative quality products to your customers.",
+    buttonTitle: "Select Your Options",
+    buttonLink: "/milled-seed-and-nut-mixes",
+    title: "Milled Seed and Nut Mixes",
+  },
+  {
+    img: biscuit,
+    para:
+      "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
+    buttonTitle: "Select Your Options",
+    buttonLink: "/snacks",
+    title: "Snacks",
+  },
+  {
+    img: bowlCereal,
+    para:
+      "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
+    buttonTitle: "Select Your Options",
+    buttonLink: "/cereal-and-crunch",
+    title: "Crunch and Cereals",
+  },
+]
+
+const HomeIndex = props => {
+  const [promos, setPromo] = useState("ourBrands")
+  var images = {
+    img1: props.data.img1.childImageSharp.fluid,
+    img2: props.data.img2.childImageSharp.fluid,
+    img3: props.data.img3.childImageSharp.fluid,
   }
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <BannerCarousel
+        images={images}
+        titleOne="Health Food With a Difference"
+        titleTwo="Health Food With a Difference"
+        titleThree="Health Food With a Difference"
+      />
+      <Container className="text-center my-5">
+        <h2 className="">
+          We develop and manufacture genuinely healthy foods that taste great!
+        </h2>
+        <Row>
+          <div className="col-sm-6">
+            <button
+              className={`btn ${
+                promos == "ourBrands" ? "btn-primary" : "btn-info"
+              }`}
+              onClick={() => setPromo("ourBrands")}
+            >
+              Our Brands
+            </button>
+          </div>
+          <div className="col-sm-6">
+            <button
+              className={`btn ${
+                promos == "privateLabel" ? "btn-primary" : "btn-info"
+              }`}
+              onClick={() => setPromo("privateLabel")}
+            >
+              Private Label
+            </button>
+          </div>
+        </Row>
+      </Container>
+      {promos == "ourBrands" && <OurBrands />}
+      {promos == "privateLabel" && (
+        <Container>
+          <RowThreeCards data={formData} />
+        </Container>
+      )}
+      <div id="qualityAndSustainability">
+        <QualityAndSustainability />
+      </div>
+      <div id="WorkWith">
+        <WorkWith />
+      </div>
+      <div id="InTheNews">
+        <InTheNews posts={props.data.allWordpressPost.edges} />
+      </div>
+      <div id="contactUs">
+        <ContactUs />
+      </div>
+    </Layout>
+  )
 }
 
 export default HomeIndex
