@@ -67,16 +67,27 @@ const VirginiaHealthPage = ({ data }) => {
       </Container>
       <Container>
         <Row>
-          <p>Virginia Harvest is a range of milled flaxseed products that are high in fibre, High in Omega 3 (ALA) and gluten free.</p>
           <p>
-            The nutrients in whole flaxseed are not easy to absorb due to the seed’s tough coat so we mill the seeds gently to make those wonderful
-            nutrients more accessible protecting the omega 3 from damage and helping you to maximise their nutritional value in your daily diet. Use 2
-            tablespoons each day in cereals, juices, yogurts, smoothies or salads.
+            To ensure a healthy daily dose of Omega 3, it is not necessary to
+            eat fish. Whether following a meat free diet or not, adding milled
+            flaxseed to your daily diet ensures you get an abundance of Omega 3
+            to maintain health.. Virginia Health range of milled flaxseed
+            products are high in Omega 3, fibre and are gluten free.
           </p>
-          <p>Our flaxseed is grown on a single farm from premium certified seeds of the “Golden Omega” variety so its origin is guaranteed.</p>
           <p>
-            It is high in Omega 3 (Alpha Linolenic Acid) and thereby is scientifically proven to help maintain normal cholesterol levels. The
-            beneficial effect is obtained with a daily intake of 2g ALA. It is important to maintain a varied and balanced diet and healthy lifestyle.
+            The nutrients in whole flaxseed are not easy to absorb due to the
+            seed’s tough coat so we mill the seeds gently to make those
+            wonderful nutrients more accessible protecting the omega 3 from
+            damage and helping you to maximise their nutritional value in your
+            daily diet. Use 2 tablespoons each day in cereals, juices, yogurts,
+            smoothies or salads.
+          </p>
+          <p>
+            The Omega 3 in flaxseed is also scientifically proven to help
+            maintain normal cholesterol levels. The beneficial effect is
+            obtained with a daily intake of 2g of Omega 3 (ALA). 2 tablespoons
+            of flaxseed provides around 6 g of Omega 3. It is important to
+            maintain a varied and balanced diet and healthy lifestyle.
           </p>
         </Row>
       </Container>
@@ -89,12 +100,19 @@ const VirginiaHealthPage = ({ data }) => {
         </h2>
         <Row className="my-5">
           <p>
-            Flaxseed for weight loss Did you know that many nutritionists view flaxseed as an essential ingredient in any healthy weight loss diet ?
-            Unlike many other high fibre foods it is extremely low in the simple carbs you need to avoid when trying to loose weight. It’s high levels
-            of fibre keep you fuller for longer avoiding those sugar lows that give you hunger pangs. Flaxseed is a gentle laxative, balancing your
-            digestion and helping the body to eliminate the toxins that accumulate from poor dietary habits . Flaxseed contains high levels of Omega 3
-            essential fatty acids which make your cell membranes more pliable so they are better able to remove any fatty deposits from inside your
-            cells . Flaxseed also contains significant levels of protein , zinc, magnesium and calcium all essential for a healthy metabolism.
+            Flaxseed for weight loss Did you know that many nutritionists view
+            flaxseed as an essential ingredient in any healthy weight loss diet
+            ? Unlike many other high fibre foods it is extremely low in the
+            simple carbs you need to avoid when trying to loose weight. It’s
+            high levels of fibre keep you fuller for longer avoiding those sugar
+            lows that give you hunger pangs. Flaxseed is a gentle laxative,
+            balancing your digestion and helping the body to eliminate the
+            toxins that accumulate from poor dietary habits . Flaxseed contains
+            high levels of Omega 3 essential fatty acids which make your cell
+            membranes more pliable so they are better able to remove any fatty
+            deposits from inside your cells . Flaxseed also contains significant
+            levels of protein , zinc, magnesium and calcium all essential for a
+            healthy metabolism.
           </p>
 
           <div className="col-sm-4 offset-sm-2">
