@@ -1,33 +1,33 @@
 import React from "react"
 import { Container } from "react-bootstrap"
 import vhealth from "../../assets/images/vhealth.png"
-import crunch from "../../assets/images/crunch.png"
+import crunch from "../../assets/images/helensFront.png"
 import squbes from "../../assets/images/squbes.png"
 import RowThreeCards from "../RowThreeCards/RowThreeCards"
 const data = [
   {
     img: vhealth,
     para:
-      "Virginia Health Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+      "Highly nutritious milled seed mixes and crunchy seed and nut toppings for cereals, fruit, yoghurt and salads",
     buttonTitle: "Read More",
     buttonLink: "/virginia-health-flaxseed",
-    title: "Virginia Health",
+    title: "Milled Seeds & Seed and Nut Crunches",
   },
   {
     img: squbes,
     para:
-      "Squbes Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+      "Delicious wholefood light snacks made with seeds, nuts, fruits, and wholegrain cereals. No refined sugar. Balanced nutritional profile",
     buttonTitle: "Visit Website",
     buttonLink: "http://www.squbes.ie",
-    title: "Squbes",
+    title: "Healthy Snacks",
   },
   {
     img: crunch,
     para:
-      "Crunch & Cereals Our products range from delicious gluten free baking mixes to highly nutritious seed mixes for cereal toppings, crunch toppings, salad toppings and snacks.",
+      "Gluten and wheat free baking mixes with no artificial stabilisers or modified starches, that taste great!",
     buttonTitle: "Read More",
     buttonLink: "/crunch-and-cereal",
-    title: "Crunch",
+    title: "Gluten Free Baking mixes",
   },
 ]
 const OurBrands = () => {

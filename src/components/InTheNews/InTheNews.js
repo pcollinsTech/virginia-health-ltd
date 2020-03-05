@@ -15,7 +15,10 @@ const InTheNews = ({ posts }) => {
         </div>
         <div className="text-center">
           <Link to="/blog">
-            <button className="btn btn-primary text-center px-5">
+            <button
+              className="btn btn-primary text-center px-5"
+              style={{ maxWidth: "348px" }}
+            >
               Read More
             </button>
           </Link>

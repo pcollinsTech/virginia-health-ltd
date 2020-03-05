@@ -19,7 +19,7 @@ const formData = [
   {
     img: seeds,
     para:
-      "Bespoke New Product Development of nutritious snacks and mixes to offer innovative quality products to your customers.",
+      "Nutrition and Technical expertise. Regulatory Compliance Project Management BRC Grade AA manufacturing Manufacturing Excellence Products you can trust",
     buttonTitle: "Select Your Options",
     buttonLink: "/milled-seed-and-nut-mixes",
     title: "Milled Seed and Nut Mixes",
@@ -27,7 +27,7 @@ const formData = [
   {
     img: biscuit,
     para:
-      "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
+      "Nutrition and Technical expertise. Regulatory Compliance Project Management BRC Grade AA manufacturing Manufacturing Excellence Products you can trust",
     buttonTitle: "Select Your Options",
     buttonLink: "/snacks",
     title: "Snacks",
@@ -35,7 +35,7 @@ const formData = [
   {
     img: bowlCereal,
     para:
-      "Bespoke New Product Development of nutritious Innovative shelf stable sweet or savoury snacks in various shapes-wheat free and peanut free.",
+      "Nutrition and Technical expertise. Regulatory Compliance Project Management BRC Grade AA manufacturing Manufacturing Excellence Products you can trust",
     buttonTitle: "Select Your Options",
     buttonLink: "/cereal-and-crunch",
     title: "Crunch and Cereals",
@@ -62,7 +62,7 @@ const HomeIndex = props => {
         <h2 className="">
           We develop and manufacture genuinely healthy foods that taste great!
         </h2>
-        <Row>
+        <Row className="home_button">
           <div className="col-sm-6">
             <button
               className={`btn ${
@@ -76,7 +76,7 @@ const HomeIndex = props => {
           <div className="col-sm-6">
             <button
               className={`btn ${
-                promos == "privateLabel" ? "btn-primary" : "btn-info"
+                promos === "privateLabel" ? "btn-primary" : "btn-info"
               }`}
               onClick={() => setPromo("privateLabel")}
             >
