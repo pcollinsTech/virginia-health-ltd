@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Row } from "react-bootstrap"
-import homeCompostablePackaging from "../../assets/images/homeCompostablePackaging.png"
+import homeCompostablePackaging from "../../assets/images/qualityAndSustainability.png"
 
 const HomeCompostablePackaging = () => {
   return (
