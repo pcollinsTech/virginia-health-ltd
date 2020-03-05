@@ -83,6 +83,32 @@ const WhatWeDoPage = ({ data }) => {
       <div id="qualityAndSustainability">
         <MeetTheExperts />
       </div>
+      <div id="privateLabel">
+        <Container>
+          <Row>
+            <div className="col-sm-6">
+              <img src={brandHere} alt="" />
+            </div>
+            <div className="col-sm-6">
+              {" "}
+              <h2>Private Label</h2>
+              <p>
+                When it comes to food, Helen and her team use top quality,
+                nutrient dense wholesome ingredients, so you won’t find any
+                synthetic stabilizers, preservatives or flavourings in any
+                products at Virginia Health Food Ltd. <br />
+                In response to the need for easy to use, nutritionally valuable
+                foods which do not contain wheat (an ingredient that is strongly
+                linked to digestive intolerance), Virginia Health Food Ltd has
+                developed a range of products from delicious, fuss free wheat
+                free and gluten free home baking mixes through to nutritious
+                breakfast seed toppings to boost your breakfast.
+              </p>
+              <button className="btn btn-primary">Read More</button>
+            </div>
+          </Row>
+        </Container>
+      </div>
       <div id="contactUs">
         <ContactUs />
       </div>

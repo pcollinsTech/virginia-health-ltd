@@ -49,23 +49,17 @@ const PrivateIndex = ({ data }) => {
       <SEO title="Private Label" />
       <Banner img={img} title="Private Label" />
       <Container className="my-5 private_label">
-        <Row>
-          <div className="col-sm-6">
-            <img src={blankLabel} alt="Blank Label" />
-          </div>
-          <div className="col-sm-6">
-            <p className="my-5" style={{ fontSize: "18px" }}>
-              Let us help you to create value in your business <br /> <br />
-              By developing manufacturing and monitoring foods to the highest
-              standards, we ensure that your inspiration leads to consistent,
-              reliable products that you and your customers can trust. <br />
-              <br />
-              Our documented project management timeline allows you clear
-              planning visibility and deadlines. This gives reassurance on
-              project progress to all stakeholders during the development and
-              launch process.
-            </p>
-          </div>
+        <Row className="text-center">
+          <p className="my-5" style={{ fontSize: "18px" }}>
+            Let us help you to create value in your business <br /> <br />
+            By developing manufacturing and monitoring foods to the highest
+            standards, we ensure that your inspiration leads to consistent,
+            reliable products that you and your customers can trust. <br />
+            <br />
+            Our documented project management timeline allows you clear planning
+            visibility and deadlines. This gives reassurance on project progress
+            to all stakeholders during the development and launch process.
+          </p>
         </Row>
       </Container>
       <Container>

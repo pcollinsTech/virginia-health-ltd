@@ -116,7 +116,7 @@ const SnacksForm = ({ data }) => {
   return (
     <Layout>
       <SEO title="Snacks" />
-      <Banner img={img} title="Snacks of all Shapes and Sizes" />
+      <Banner img={img} />
       <Container className="my-5 text-center">
         <SelectIngredients data={ingredientsData} />
         <UniqueSellingPoints fish={false} />
