@@ -10,6 +10,7 @@ import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
+import ScrollAnimation from "react-animate-on-scroll"
 
 const OurBrandsPage = ({ data }) => {
   const img = <Img fluid={data.file.childImageSharp.fluid} />
@@ -19,30 +20,42 @@ const OurBrandsPage = ({ data }) => {
       <SEO title="Our Brands" />
       <Banner img={img} title="Our Brands" />
       <Container className="text-center my-5">
-        <Row>
-          <p className="home_text">
-            Our Products include highly nutritious, milled and crunchy seed
-            toppings, delicious wholesome innovative snacks, low sugar cereals
-            and gluten free baking mixes. We weave the valuable properties of
-            seeds and cereals such as flaxseed, sunflower seed, pumpkinseed and
-            chia , oats, quinoa and amaranth into delicious products using
-            technical excellence and a dash of ingenuity to produce products
-            that delight our customers.
-          </p>
-        </Row>
+        <ScrollAnimation animateIn="fadeInUp">
+          <Row>
+            <p className="home_text">
+              Our Products include highly nutritious, milled and crunchy seed
+              toppings, delicious wholesome innovative snacks, low sugar cereals
+              and gluten free baking mixes. We weave the valuable properties of
+              seeds and cereals such as flaxseed, sunflower seed, pumpkinseed
+              and chia , oats, quinoa and amaranth into delicious products using
+              technical excellence and a dash of ingenuity to produce products
+              that delight our customers.
+            </p>
+          </Row>
+        </ScrollAnimation>
       </Container>
-      <OurBrands />
+      <ScrollAnimation animateIn="fadeInUp">
+        <OurBrands />
+      </ScrollAnimation>
       <div id="qualityAndSustainability">
-        <QualityAndSustainability />
+        <ScrollAnimation animateIn="fadeInUp">
+          <QualityAndSustainability />
+        </ScrollAnimation>
       </div>
       <div id="WorkWith">
-        <WorkWith />
+        <ScrollAnimation animateIn="fadeInUp">
+          <WorkWith />
+        </ScrollAnimation>
       </div>
       <div id="InTheNews">
-        <InTheNews posts={data.allWordpressPost.edges} />
+        <ScrollAnimation animateIn="fadeInUp">
+          <InTheNews posts={data.allWordpressPost.edges} />
+        </ScrollAnimation>
       </div>
       <div id="contactUs">
-        <ContactUs />
+        <ScrollAnimation animateIn="fadeInUp">
+          <ContactUs />
+        </ScrollAnimation>
       </div>
     </Layout>
   )

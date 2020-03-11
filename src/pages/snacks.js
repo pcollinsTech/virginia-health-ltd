@@ -10,6 +10,7 @@ import ContactUs from "../components/ContactUs"
 import SelectIngredients from "../components/SelectIngredients"
 import UniqueSellingPoints from "../components/UniqueSellingPoints"
 import SelectPackaging from "../components/SelectPackaging"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import nutsSeeds from "../assets/images/ingredients/nutsSeeds.png"
 import cereals from "../assets/images/ingredients/cereals.png"
@@ -118,75 +119,95 @@ const SnacksForm = ({ data }) => {
       <SEO title="Snacks" />
       <Banner img={img} />
       <Container className="my-5 text-center">
-        <SelectIngredients data={ingredientsData} />
-        <UniqueSellingPoints fish={false} />
+        <ScrollAnimation animateIn="fadeInUp">
+          <SelectIngredients data={ingredientsData} />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp">
+          <UniqueSellingPoints fish={false} />
+        </ScrollAnimation>
         <Fragment>
-          <h2>Select your Unique Shape</h2>
-          <Row className="my-5 justify-content-md-center">
-            {textureData.map(texture => {
-              return (
-                <div
-                  className="col-xs-3 ingredient"
-                  onClick={e => handleTextureSelect(texture)}
-                >
-                  <img src={texture.img} alt="" />
-                  {tick(texture, textures)}
-                  <h3>{texture.title}</h3>
-                </div>
-              )
-            })}
-          </Row>
-        </Fragment>
-        <Fragment>
-          <h2>Select your Texture</h2>
-          <Row className="my-5 justify-content-md-center">
-            {shapeData.map(shape => {
-              return (
-                <div
-                  className="col-xs-3 ingredient"
-                  onClick={e => handleShapeSelect(shape)}
-                >
-                  <div className="blue_square">
-                    <h2>{shape.title}</h2>
+          <ScrollAnimation animateIn="fadeInUp">
+            <h2>Select your Unique Shape</h2>
+            <Row className="my-5 justify-content-md-center">
+              {textureData.map(texture => {
+                return (
+                  <div
+                    className="col-xs-3 ingredient"
+                    onClick={e => handleTextureSelect(texture)}
+                  >
+                    <img src={texture.img} alt="" />
+                    {tick(texture, textures)}
+                    <h3>{texture.title}</h3>
                   </div>
-                  {tick(shape, shapes)}
-                </div>
-              )
-            })}
-          </Row>
+                )
+              })}
+            </Row>
+          </ScrollAnimation>
         </Fragment>
-        <SelectPackaging data={packagingData} />
-        <form className="d-flex justify-content-between flex-column">
-          <div className="form-group">
-            <input type="text" className="form-control" placeholder="Name" />
-          </div>
-          <div class="row form-group">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Company" />
+        <Fragment>
+          <ScrollAnimation animateIn="fadeInUp">
+            <h2>Select your Texture</h2>
+            <Row className="my-5 justify-content-md-center">
+              {shapeData.map(shape => {
+                return (
+                  <div
+                    className="col-xs-3 ingredient"
+                    onClick={e => handleShapeSelect(shape)}
+                  >
+                    <div className="blue_square">
+                      <h2>{shape.title}</h2>
+                    </div>
+                    {tick(shape, shapes)}
+                  </div>
+                )
+              })}
+            </Row>
+          </ScrollAnimation>
+        </Fragment>
+        <ScrollAnimation animateIn="fadeInUp">
+          <SelectPackaging data={packagingData} />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp">
+          <form className="d-flex justify-content-between flex-column">
+            <div className="form-group">
+              <input type="text" className="form-control" placeholder="Name" />
             </div>
-            <div class="col">
+            <div class="row form-group">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Company" />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Contact Number"
+                />
+              </div>
+            </div>
+            <div className="form-group">
               <input
-                type="text"
-                class="form-control"
-                placeholder="Contact Number"
+                type="email"
+                className="form-control"
+                placeholder="Email"
               />
             </div>
-          </div>
-          <div className="form-group">
-            <input type="email" className="form-control" placeholder="Email" />
-          </div>
-          <Link to="">
-            <button className="btn btn-info align-text-bottom">
-              Enquire Now
-            </button>
-          </Link>{" "}
-        </form>
+            <Link to="">
+              <button className="btn btn-info align-text-bottom">
+                Enquire Now
+              </button>
+            </Link>{" "}
+          </form>
+        </ScrollAnimation>
       </Container>
       <div id="workWith">
-        <WorkWith />
+        <ScrollAnimation animateIn="fadeInUp">
+          <WorkWith />
+        </ScrollAnimation>
       </div>
       <div id="contactUs">
-        <ContactUs />
+        <ScrollAnimation animateIn="fadeInUp">
+          <ContactUs />
+        </ScrollAnimation>
       </div>
     </Layout>
   )

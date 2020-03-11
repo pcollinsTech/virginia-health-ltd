@@ -8,11 +8,13 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 class CookiesPage extends React.Component {
   render() {
-    const img = <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
+    const img = (
+      <Img loading="lazy" fluid={this.props.data.file.childImageSharp.fluid} />
+    )
     return (
       <Layout>
         <SEO title="Home" />
-        <Banner img={img} title="TERMS AND CONDITIONS OF USE" />
+        <Banner img={img} title="Cookie Policy" />
         <Container className="text-center my-5">
           <Row>
             <h2>Cookie Policy</h2>

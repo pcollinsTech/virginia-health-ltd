@@ -9,6 +9,7 @@ import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
 import InTheNews from "../components/InTheNews"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import seeds from "../assets/images/seeds.png"
 import bowlCereal from "../assets/images/bowlCereal.png"
@@ -59,49 +60,61 @@ const HomeIndex = props => {
         titleThree="Health Food With a Difference"
       />
       <Container className="text-center my-5">
-        <h2 className="">
-          We develop and manufacture genuinely healthy foods that taste great!
-        </h2>
-        <Row className="home_button">
-          <div className="col-sm-6">
-            <button
-              className={`btn ${
-                promos === "ourBrands" ? "btn-primary" : "btn-info"
-              }`}
-              onClick={() => setPromo("ourBrands")}
-            >
-              Our Brands
-            </button>
-          </div>
-          <div className="col-sm-6">
-            <button
-              className={`btn ${
-                promos === "privateLabel" ? "btn-primary" : "btn-info"
-              }`}
-              onClick={() => setPromo("privateLabel")}
-            >
-              Private Label
-            </button>
-          </div>
-        </Row>
+        <ScrollAnimation animateIn="fadeInUp">
+          <h2 className="">
+            We develop and manufacture genuinely healthy foods that taste great!
+          </h2>
+          <Row className="home_button">
+            <div className="col-sm-6">
+              <button
+                className={`btn ${
+                  promos === "ourBrands" ? "btn-primary" : "btn-info"
+                }`}
+                onClick={() => setPromo("ourBrands")}
+              >
+                Our Brands
+              </button>
+            </div>
+            <div className="col-sm-6">
+              <button
+                className={`btn ${
+                  promos === "privateLabel" ? "btn-primary" : "btn-info"
+                }`}
+                onClick={() => setPromo("privateLabel")}
+              >
+                Private Label
+              </button>
+            </div>
+          </Row>
+        </ScrollAnimation>
       </Container>
-      {promos == "ourBrands" && <OurBrands />}
-      {promos == "privateLabel" && (
-        <Container>
-          <RowThreeCards data={formData} />
-        </Container>
-      )}
+      <ScrollAnimation animateIn="fadeInUp">
+        {promos == "ourBrands" && <OurBrands />}
+        {promos == "privateLabel" && (
+          <Container>
+            <RowThreeCards data={formData} />
+          </Container>
+        )}
+      </ScrollAnimation>
       <div id="qualityAndSustainability">
-        <QualityAndSustainability />
+        <ScrollAnimation animateIn="fadeInUp">
+          <QualityAndSustainability />
+        </ScrollAnimation>
       </div>
       <div id="WorkWith">
-        <WorkWith />
+        <ScrollAnimation animateIn="fadeInUp">
+          <WorkWith />
+        </ScrollAnimation>
       </div>
       <div id="InTheNews">
-        <InTheNews posts={props.data.allWordpressPost.edges} />
+        <ScrollAnimation animateIn="fadeInUp">
+          <InTheNews posts={props.data.allWordpressPost.edges} />
+        </ScrollAnimation>
       </div>
       <div id="contactUs">
-        <ContactUs />
+        <ScrollAnimation animateIn="fadeInUp">
+          <ContactUs />
+        </ScrollAnimation>
       </div>
     </Layout>
   )

@@ -8,6 +8,7 @@ import { Container, Row } from "react-bootstrap"
 import WorkWith from "../components/WorkWith"
 import QualityAndSustainability from "../components/QualityAndSustainability"
 import ContactUs from "../components/ContactUs"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import blankLabel from "../assets/images/blackLabel.png"
 import seeds from "../assets/images/seeds.png"
@@ -49,30 +50,41 @@ const PrivateIndex = ({ data }) => {
       <SEO title="Private Label" />
       <Banner img={img} title="Private Label" />
       <Container className="my-5 private_label">
-        <Row className="text-center">
-          <p className="my-5" style={{ fontSize: "18px" }}>
-            Let us help you to create value in your business <br /> <br />
-            By developing manufacturing and monitoring foods to the highest
-            standards, we ensure that your inspiration leads to consistent,
-            reliable products that you and your customers can trust. <br />
-            <br />
-            Our documented project management timeline allows you clear planning
-            visibility and deadlines. This gives reassurance on project progress
-            to all stakeholders during the development and launch process.
-          </p>
-        </Row>
+        <ScrollAnimation animateIn="fadeInUp">
+          <Row className="text-center">
+            <p className="my-5" style={{ fontSize: "18px" }}>
+              Let us help you to create value in your business <br /> <br />
+              By developing manufacturing and monitoring foods to the highest
+              standards, we ensure that your inspiration leads to consistent,
+              reliable products that you and your customers can trust. <br />
+              <br />
+              Our documented project management timeline allows you clear
+              planning visibility and deadlines. This gives reassurance on
+              project progress to all stakeholders during the development and
+              launch process.
+            </p>
+          </Row>
+        </ScrollAnimation>
       </Container>
       <Container>
-        <RowThreeCards data={formData} />
+        <ScrollAnimation animateIn="fadeInUp">
+          <RowThreeCards data={formData} />
+        </ScrollAnimation>
       </Container>
       <div id="qualityAndSustainability">
-        <QualityAndSustainability />
+        <ScrollAnimation animateIn="fadeInUp">
+          <QualityAndSustainability />
+        </ScrollAnimation>
       </div>
       <div id="WorkWith">
-        <WorkWith />
+        <ScrollAnimation animateIn="fadeInUp">
+          <WorkWith />
+        </ScrollAnimation>
       </div>
       <div id="contactUs">
-        <ContactUs />
+        <ScrollAnimation animateIn="fadeInUp">
+          <ContactUs />
+        </ScrollAnimation>
       </div>
     </Layout>
   )

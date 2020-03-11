@@ -10,6 +10,7 @@ import ContactUs from "../components/ContactUs"
 import SelectIngredients from "../components/SelectIngredients"
 import UniqueSellingPoints from "../components/UniqueSellingPoints"
 import SelectPackaging from "../components/SelectPackaging"
+import ScrollAnimation from "react-animate-on-scroll"
 
 import nutsSeeds from "../assets/images/ingredients/nutsSeeds.png"
 import cerealAndCrunch from "../assets/images/ingredients/cerealAndCrunch.png"
@@ -92,42 +93,58 @@ const CrunchAndCerealForm = ({ data }) => {
   return (
     <Layout>
       <SEO title="Crunch and Cereals" />
-      <Banner img={img} title="Crunch and Cereals" />
+      <Banner img={img} />
       <Container className="my-5 text-center">
-        <SelectIngredients data={ingredientsData} />
-        <UniqueSellingPoints fish={false} />
-        <SelectPackaging data={packagingData} />
-        <form className="d-flex justify-content-between flex-column">
-          <div className="form-group">
-            <input type="text" className="form-control" placeholder="Name" />
-          </div>
-          <div class="row form-group">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Company" />
+        <ScrollAnimation animateIn="fadeInUp">
+          <SelectIngredients data={ingredientsData} />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp">
+          <UniqueSellingPoints fish={false} />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp">
+          <SelectPackaging data={packagingData} />{" "}
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp">
+          <form className="d-flex justify-content-between flex-column">
+            <div className="form-group">
+              <input type="text" className="form-control" placeholder="Name" />
             </div>
-            <div class="col">
+            <div class="row form-group">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Company" />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Contact Number"
+                />
+              </div>
+            </div>
+            <div className="form-group">
               <input
-                type="text"
-                class="form-control"
-                placeholder="Contact Number"
+                type="email"
+                className="form-control"
+                placeholder="Email"
               />
             </div>
-          </div>
-          <div className="form-group">
-            <input type="email" className="form-control" placeholder="Email" />
-          </div>
-          <Link to="">
-            <button className="btn btn-info align-text-bottom">
-              Enquire Now
-            </button>
-          </Link>{" "}
-        </form>
+            <Link to="">
+              <button className="btn btn-info align-text-bottom">
+                Enquire Now
+              </button>
+            </Link>{" "}
+          </form>
+        </ScrollAnimation>
       </Container>
       <div id="workWith">
-        <WorkWith />
+        <ScrollAnimation animateIn="fadeInUp">
+          <WorkWith />
+        </ScrollAnimation>
       </div>
       <div id="contactUs">
-        <ContactUs />
+        <ScrollAnimation animateIn="fadeInUp">
+          <ContactUs />
+        </ScrollAnimation>
       </div>
     </Layout>
   )
