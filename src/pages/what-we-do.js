@@ -12,6 +12,7 @@ import ContactUs from "../components/ContactUs"
 import quality from "../assets/images/quality.jpeg"
 import manufacture from "../assets/images/manufacture.jpeg"
 import productDevelopment from "../assets/images/productDevelopment.jpeg"
+import brandHere from "../assets/images/brandHere.png"
 
 const WhatWeDoPage = ({ data }) => {
   const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
