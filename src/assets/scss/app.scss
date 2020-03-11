@@ -31,7 +31,6 @@
 @import "components/banner";
 @import "components/rowThreeCards";
 @import "components/dropdown";
-@import "components/bannerCarousel";
 @import "components/selectIngredient";
 @import "components/selectPackaging";
 @import "components/featuredBlog";
@@ -56,6 +55,7 @@
 @import "pages/virginiaHarvest";
 
 @import "base/mobile";
+@import "components/bannerCarousel";
 @import "base/bootstrapOverwrites";
 
 .grey-bg {

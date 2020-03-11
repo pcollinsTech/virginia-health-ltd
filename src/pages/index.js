@@ -66,7 +66,7 @@ const HomeIndex = props => {
           <div className="col-sm-6">
             <button
               className={`btn ${
-                promos == "ourBrands" ? "btn-primary" : "btn-info"
+                promos === "ourBrands" ? "btn-primary" : "btn-info"
               }`}
               onClick={() => setPromo("ourBrands")}
             >
