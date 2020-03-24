@@ -89,7 +89,7 @@ const packagingData = [
 ]
 
 const CrunchAndCerealForm = ({ data }) => {
-  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="Crunch and Cereals" />
@@ -102,7 +102,7 @@ const CrunchAndCerealForm = ({ data }) => {
           <UniqueSellingPoints fish={false} />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
-          <SelectPackaging data={packagingData} />{" "}
+          <SelectPackaging data={packagingData} />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
           <form className="d-flex justify-content-between flex-column">

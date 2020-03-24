@@ -12,11 +12,11 @@ import ScrollAnimation from "react-animate-on-scroll"
 
 import quality from "../assets/images/quality.jpeg"
 import manufacture from "../assets/images/manufacture.jpeg"
-import productDevelopment from "../assets/images/productDevelopment.jpeg"
+import productDevelopment from "../assets/images/new.jpeg"
 import brandHere from "../assets/images/brandHere.png"
 
 const WhatWeDoPage = ({ data }) => {
-  const img = <Img loading="lazy" fluid={data.file.childImageSharp.fluid} />
+  const img = <Img fluid={data.file.childImageSharp.fluid} />
   return (
     <Layout>
       <SEO title="What We Do" />
