@@ -49,7 +49,7 @@ const OurBrandsPage = ({ data }) => {
       </div>
       <div id="InTheNews">
         <ScrollAnimation animateIn="fadeInUp">
-          <InTheNews posts={data.allWordpressPost.edges} />
+          <InTheNews />
         </ScrollAnimation>
       </div>
       <div id="contactUs">
@@ -65,20 +65,6 @@ export default OurBrandsPage
 
 export const pageQuery = graphql`
   query {
-    allWordpressPost(limit: 3) {
-      edges {
-        node {
-          date(formatString: "DD / MMMM / YYYY")
-          slug
-          title
-          wordpress_id
-          excerpt
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
     file(relativePath: { eq: "bannerOurBrands.png" }) {
       childImageSharp {
         fluid {

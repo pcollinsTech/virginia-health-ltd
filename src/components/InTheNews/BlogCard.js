@@ -2,17 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 const BlogCard = ({ post }) => {
-  const {
-    title,
-    featured_media: { source_url },
-    slug,
-    excerpt,
-    date,
-  } = post.node
+  const { title, img, slug, excerpt, date } = post
   return (
     <div className="col-sm-4 blog_summary_item d-flex justify-content-between flex-column">
       <Link to={slug}>
-        <img src={source_url} alt="" />
+        <img src={img} alt="" />
         <h4
           dangerouslySetInnerHTML={{ __html: title }}
           className="my-2"

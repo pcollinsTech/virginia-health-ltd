@@ -108,7 +108,7 @@ const HomeIndex = props => {
       </div>
       <div id="InTheNews">
         <ScrollAnimation animateIn="fadeInUp">
-          <InTheNews posts={props.data.allWordpressPost.edges} />
+          <InTheNews />
         </ScrollAnimation>
       </div>
       <div id="contactUs">
@@ -124,20 +124,6 @@ export default HomeIndex
 
 export const pageQuery = graphql`
   query {
-    allWordpressPost(limit: 3) {
-      edges {
-        node {
-          date(formatString: "DD / MMMM / YYYY")
-          slug
-          title
-          wordpress_id
-          excerpt
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
     img1: file(relativePath: { eq: "bannerOne.png" }) {
       childImageSharp {
         fluid {
